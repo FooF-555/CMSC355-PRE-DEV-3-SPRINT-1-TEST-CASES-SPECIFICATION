@@ -2,12 +2,12 @@ import java.util.*;
 import javax.sound.sampled.SourceDataLine;
 
 
-public class AccountDatabase {
+public class PatientAccountDatabase {
     //////////// Database field
     private ArrayList<Account> database;
 
     //////////// Constructor
-    public AccountDatabase() {
+    public PatientAccountDatabase() {
         database = new ArrayList<>();
     }
 
@@ -74,7 +74,7 @@ public class AccountDatabase {
     //////////// Other
     
     public void displayDatabase() {
-        System.out.println("//////// Account Database ////////\n" +
+        System.out.println("//////// Patient Account Database ////////\n" +
                            "----------------------------------");
         for (Account account: database) {
             account.getAccountDetails();
