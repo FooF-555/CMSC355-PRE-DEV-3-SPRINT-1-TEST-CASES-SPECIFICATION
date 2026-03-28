@@ -17,6 +17,8 @@ public class Account {
         this.userID = userID;
     }
 
+    //public void createAccount();
+
     public String getUsername() {
         return username;
     }
@@ -41,11 +43,11 @@ public class Account {
         return userID;
     }
 
-    public String getAccountDetails() {
-        return "//// Account Details of User " + userID +
+    public void getAccountDetails() {
+        System.out.println("/////// Account Details of User ///////" + userID +
         "\n// Username: " + username +
         "\n// Email Address: " + email +
         "\n// Phone Number: " + phoneNumber +
-        "\n// Home Address: " + homeAddress;
+        "\n// Home Address: " + homeAddress + "\n");
     }
 }
