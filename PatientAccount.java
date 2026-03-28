@@ -52,9 +52,9 @@ public class PatientAccount {
 
     public String getAccountDetails() {
         return "//// Account Details of Patient: " + userID +
-        "\n// First Name: " + username +
+        "\n// Name: " + firstName + " " + lastName +
         "\n// Email Address: " + email +
         "\n// Phone Number: " + phoneNumber +
-        "\n// Home Address: " + homeAddress;
+        "\n// Home Address: " + homeAddress + "\n";
     }
 }
