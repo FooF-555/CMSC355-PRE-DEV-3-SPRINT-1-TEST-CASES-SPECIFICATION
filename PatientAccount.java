@@ -1,24 +1,33 @@
 import java.util.*;
 
-public class Account {
-    private String username;
+public class PatientAccount {
+    private String firstName;
+    private String lastName;
     private String password;
     private String email;
     private int phoneNumber;
     private String homeAddress;
     private final int userID;
 
-    public Account(String username, String password, String email, int phoneNumber, String homeAddress, int userID) {
-        this.username = username;
-        this.password = password;
+    public PatientAccount(String firstName, String lastName, String password, String email, int phoneNumber, String homeAddress, int userID) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.homeAddress = homeAddress;
         this.userID = userID;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
     }
 
     public String getPassword() {
@@ -42,8 +51,8 @@ public class Account {
     }
 
     public String getAccountDetails() {
-        return "//// Account Details of User " + userID +
-        "\n// Username: " + username +
+        return "//// Account Details of Patient: " + userID +
+        "\n// First Name: " + username +
         "\n// Email Address: " + email +
         "\n// Phone Number: " + phoneNumber +
         "\n// Home Address: " + homeAddress;
