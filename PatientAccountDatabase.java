@@ -107,7 +107,7 @@ public class PatientAccountDatabase {
         }
     }
 
-    public void searchByUserID(int givenID) {
+    public void searchByID(int givenID) {
         for (PatientAccount account: database) {
             if (account.getUserID() == givenID) {
                 account.getAccountDetails();
