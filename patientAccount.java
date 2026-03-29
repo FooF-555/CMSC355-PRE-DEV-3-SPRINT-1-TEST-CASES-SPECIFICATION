@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class PatientAccount {
+    // Patient Fields
     private String firstName;
     private String lastName;
     private String password;
@@ -12,6 +13,7 @@ public class PatientAccount {
     private String homeAddress;
     private final int userID;
 
+    // Constructor
     public PatientAccount(String firstName, String lastName, String password, String email, int age, String gender, String dateOfBirth, int phoneNumber, String homeAddress, int userID) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,6 +26,7 @@ public class PatientAccount {
         this.userID = userID;
     }
 
+    /////// Getter Methods
     public String getFirstName() {
         return firstName;
     }
@@ -68,6 +71,8 @@ public class PatientAccount {
         return userID;
     }
 
+    ///////////////////////////////////////////
+    /// Getting patient details
     public String getAccountDetails() {
         return "//// Account Details of Patient: " + userID +
         "\n// Name: " + firstName + " " + lastName +
