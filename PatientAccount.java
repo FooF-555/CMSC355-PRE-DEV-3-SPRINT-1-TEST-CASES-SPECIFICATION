@@ -18,6 +18,7 @@ public class PatientAccount {
         this.email = email;
         this.age = age;
         this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
         this.homeAddress = homeAddress;
         this.userID = userID;
