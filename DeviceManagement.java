@@ -47,12 +47,16 @@ public class DeviceManagement {
             switch (userChoice) {
                 case 1:
                     System.out.println("Please input the name of your IoT Device: ");
-                    int givenDeviceName = Integer.parseInt(input.nextLine());
+                    String givenDeviceName = input.nextLine();
 
                     System.out.println("Please input the manufacturer of your IoT Device: ");
                     String givenManufacturer = input.nextLine();
 
-                    
+                    int randomID = (int)(Math.random() * ((50000 - 10000) + 1)) + 10000;
+                    int randomModelNum = (int)(Math.random() * ((9999999 - 1000000) + 1)) + 1000000;
+
+                    IotDevice newDevice = new IoTDevice(randomID, givenDeviceName, givenManufacturer, randomModelNum, "Active", 0.1);
+                    deviceList.add(new IoTDevice(randomID, givenDeviceName, givenManufacturer, randomModelNum, "Active", 0.1));
 
                 case 2:
                     displayDeviceList();
