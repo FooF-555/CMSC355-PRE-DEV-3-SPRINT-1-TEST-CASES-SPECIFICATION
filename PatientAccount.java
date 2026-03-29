@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class PatientAccount {
     private String firstName;
     private String lastName;
