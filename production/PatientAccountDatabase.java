@@ -2,7 +2,6 @@ package production;
 
 import java.util.*;
 
-
 public class PatientAccountDatabase {
     //////////// Database field
     private ArrayList<PatientAccount> database;
@@ -32,7 +31,6 @@ public class PatientAccountDatabase {
             if (account.getFirstName().equals(givenFirstName)) {
                 account.getAccountDetails();
                 System.out.println();
-                return account.getAccountDetails();
             }
         }
         return "not found";
@@ -130,3 +128,4 @@ public class PatientAccountDatabase {
         }
     }
 }
+
