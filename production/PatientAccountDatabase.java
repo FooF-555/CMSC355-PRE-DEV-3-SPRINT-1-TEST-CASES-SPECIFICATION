@@ -27,13 +27,15 @@ public class PatientAccountDatabase {
     }
 
     //////////// Search Functions
-    public void searchByFirstName(String givenFirstName) {
+    public String searchByFirstName(String givenFirstName) {
         for (PatientAccount account: database) {
             if (account.getFirstName().equals(givenFirstName)) {
                 account.getAccountDetails();
                 System.out.println();
+                return account.getAccountDetails();
             }
         }
+        return "not found";
     }
 
     public void searchByLastName(String givenLastName) {
