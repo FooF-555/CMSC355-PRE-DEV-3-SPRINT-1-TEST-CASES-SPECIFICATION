@@ -16,11 +16,6 @@ public class DeviceManagement {
         deviceList.remove(inputDevice);
     }
 
-    // For setting a device's attributes
-    public void setName(String newName) {
-        
-    }
-
     public void displayMenu() {
         System.out.println("/////// Welcome to the IoT Device Management Page!" +
         "// Please select one of the options (1-4) below: " +
