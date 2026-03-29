@@ -2,12 +2,12 @@ import java.util.*;
 import javax.sound.sampled.SourceDataLine;
 
 
-public class physicianAccountDatabase {
+public class PhysicianAccountDatabase {
     //////////// Database field
     private ArrayList<PhysicianAccount> database;
 
     //////////// Constructor
-    public physicianAccountDatabase() {
+    public PhysicianAccountDatabase() {
         database = new ArrayList<>();
     }
 
