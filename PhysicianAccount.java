@@ -51,10 +51,10 @@ public class PhysicianAccount {
 
     ///////////////////////////////////////////
     /// Getting patient details
-    public String getAccountDetails() {
-        return "//// Account Details of Physician: " + physicianID +
+    public void getAccountDetails() {
+        System.out.println("//// Account Details of Physician: " + physicianID +
         "\n// Name: " + firstName + " " + lastName +
         "\n// Email Address: " + email +
-        "\n// Phone Number: " + phoneNumber;
+        "\n// Phone Number: " + phoneNumber + "\n");
     }
 }
