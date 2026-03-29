@@ -8,10 +8,10 @@ public class IoTDevice {
     private final String manufacturer;
     private final int modelNumber;
     private String status;
-    private String firmwareVersion;
+    private float firmwareVersion;
 
     // Constructor
-    public IoTDevice(int deviceID, String deviceName, String manufacturer, int modelNumber, String status, String firmwareVersion) {
+    public IoTDevice(int deviceID, String deviceName, String manufacturer, int modelNumber, String status, float firmwareVersion) {
         this.deviceID = deviceID;
         this.deviceName = deviceName;
         this.manufacturer = manufacturer;
@@ -41,7 +41,7 @@ public class IoTDevice {
         return status;
     }
 
-    public String getVersion() {
+    public float getVersion() {
         return firmwareVersion;
     }
 
@@ -54,7 +54,7 @@ public class IoTDevice {
         status = newStatus;
     }
 
-    public void setVersion(String newVersion) {
+    public void setVersion(float newVersion) {
         firmwareVersion = newVersion;
     }
 
