@@ -80,9 +80,7 @@ class PatientAccountDatabaseTest {
 
     @Test
     void displayDatabase() {
-        PrintStream out = System.out;
-        String expected = "//////// Patient Account Database ////////\n" +
-                "----------------------------------";
+        Db.addToDatabase(acc);
         ArrayList<PatientAccount> patientAccounts = Db.displayDatabase();
         assertEquals(acc, patientAccounts.get(0));
 
