@@ -26,14 +26,15 @@ public class PatientAccountDatabase {
     }
 
     //////////// Search Functions
-    public String searchByFirstName(String givenFirstName) {
+    public PatientAccount searchByFirstName(String givenFirstName) {
         for (PatientAccount account: database) {
             if (account.getFirstName().equals(givenFirstName)) {
                 account.getAccountDetails();
                 System.out.println();
+                return account;
             }
         }
-        return "not found";
+        return null;
     }
 
     public void searchByLastName(String givenLastName) {
@@ -119,13 +120,16 @@ public class PatientAccountDatabase {
 
     //////////// Other
     
-    public void displayDatabase() {
+    public ArrayList<PatientAccount> displayDatabase() {
         System.out.println("//////// Patient Account Database ////////\n" +
                            "----------------------------------");
+        ArrayList<PatientAccount> patientArray = new ArrayList<>();
         for (PatientAccount account: database) {
-            account.getAccountDetails();
+            patientArray.add(account.getAccountDetails());
             System.out.println();
         }
+
+        return patientArray;
     }
 }
 

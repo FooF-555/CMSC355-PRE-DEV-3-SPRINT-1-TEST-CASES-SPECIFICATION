@@ -7,6 +7,7 @@ import production.PatientAccountDatabase;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,23 +20,22 @@ class PatientAccountDatabaseTest {
     public void initDb(){
         Db = new PatientAccountDatabase();
         acc = new PatientAccount("first", "last", "pass", "mail", 2, "gen", "01/01/1900", 804808888, "123rd", 2);
-
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
+        PrintStream ps = new PrintStream(output);
+        System.setOut(ps);
 
     }
 
     @Test
     void addToDatabase() {
         Db.addToDatabase(acc);
-        Db.searchByFirstName("first");
-        assertEquals(output.toString(), acc.getAccountDetails());
+
+        assertEquals(acc, Db.searchByFirstName("first"));
     }
 
     @Test
     void deleteFromDatabase() {
         Db.deleteFromDatabase(acc);
-        assertEquals(Db.searchByFirstName("first"), "not found");
+        assertNotEquals(acc, Db.searchByFirstName("first"));
     }
 
     @Test
@@ -83,6 +83,8 @@ class PatientAccountDatabaseTest {
         PrintStream out = System.out;
         String expected = "//////// Patient Account Database ////////\n" +
                 "----------------------------------";
+        ArrayList<PatientAccount> patientAccounts = Db.displayDatabase();
+        assertEquals(acc, patientAccounts.get(0));
 
     }
 }

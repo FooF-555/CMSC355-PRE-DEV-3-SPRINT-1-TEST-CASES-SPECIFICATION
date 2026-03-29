@@ -68,7 +68,7 @@ public class PatientAccount {
         return userID;
     }
 
-    public void getAccountDetails() {
+    public PatientAccount getAccountDetails() {
         System.out.println("//// Account Details of Patient: " + userID +
         "\n// Name: " + firstName + " " + lastName +
         "\n// Email Address: " + email +
@@ -77,5 +77,7 @@ public class PatientAccount {
         "\n// Date of Birth: " + dateOfBirth +
         "\n// Phone Number: " + phoneNumber +
         "\n// Home Address: " + homeAddress + "\n");
+
+        return this;
     }
 }
