@@ -1,4 +1,4 @@
-//superclass for general account info
+package production;//superclass for general production.account info
 
 public class account{
     String username;
