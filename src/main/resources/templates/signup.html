@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="index.php" method="POST">
+        <label for="Username" style="font-size: medium;">
+            <b>Username: </b>
+        </label>
+        <input type="text" id="Username" placeholder="Enter username here" required><br>
+
+        <label for="Password" style="font-size: medium;">
+           <b>Password: </b>
+        </label>
+        <input type="password" id="Password" placeholder="Enter password here" minlength="7" required><br>
+
+        <label for="Date of Birth" aria-required style="font-size: medium;">
+            <b>Date of Birth: </b>
+        </label>"
+        <input type="date" id="DateOfBirth" required><br>
+
+        <label for="Email" style="font-size: medium;">
+            <b>Email Address: </b>
+        </label>
+        <input type="email" id="Email" placeholder="Enter email address here" required><br>
+
+        <label for="Phone Number" style="font-size: medium;">
+            <b>Phone Number: </b>
+        </label>
+        <input type="tel" id="PhoneNumber" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+        
+       
+        <label for="Gender">
+            <b>Gender: </b>
+
+        <label for="Male">
+            <i>Male</i>
+        </label>
+        <input type="radio" id="Male" value="Male" name="Gender">
+        <label for="Female">
+            <i>Female</i>
+        </label>
+        <input type="radio" id="Female" value="Female" name="Gender">
+
+        <label for="Other">
+            <i>Other</i>
+        </label>
+        <input type="radio" id="Other" name="Gender"><br>
+
+        <label for="AdditionalInfo">
+            <i>Additional Info: </i>
+        </label>
+        <textarea id="additionalInfo" rows="2" cols="25" placeholder="Enter here any additional information we should know about"></textarea><br>
+
+        <button type="reset">
+            <i>Reset</i>
+        </button>
+
+        <!--This doesn't do anything at the moment-->
+        <!-- Supposed to direct you to the patient/physician dashboard page-->
+        <button type="submit">
+            <i>Create Account</i>
+        </button>
+    </form>
+
+
+</body>
