@@ -1,0 +1,36 @@
+body{
+    background-image: url(background\ image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#signupPage {
+    display: grid;
+    position: relative;
+    bottom: 100px;
+    top: 35px;
+    left: 150px;
+    border: 3px;
+    background-color: rgb(43, 166, 182);
+    border-radius: 10px;
+    border-style: solid;
+    width: 450px;
+    height: 550px;
+}
+
+.inputBox {
+    margin-left: 8px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.inputLabel {
+    margin-left: 8px;
+}
+
+#additionalInfoLabel {
+    bottom: 15px;
+    position: relative;
+}
