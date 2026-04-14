@@ -50,7 +50,7 @@ public class PhysicianAccount {
     }
 
     ///////////////////////////////////////////
-    /// Getting patient details
+    /// Getting physician details
     public String getAccountDetails() {
         return "//// Account Details of Physician: " + physicianID +
         "\n// Name: " + firstName + " " + lastName +
