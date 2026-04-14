@@ -9,15 +9,14 @@ body{
 #loginTitle {
     font-family: "Roboto Mono", monospace;
     position: absolute;
-    left: 130px;
-    top: 30px;
+    right: 20px;
+    top: 10px;
 }
 
 #loginPage {
-    position: relative;
-    bottom: 100px;
-    top: 120px;
-    left: 400px;
+    position: absolute;
+    inset: 50%;
+    translate: -50% -50%;
     border: 3px;
     background-color: rgb(43, 166, 182);
     border-radius: 10px;
