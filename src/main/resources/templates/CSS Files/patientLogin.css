@@ -6,13 +6,14 @@ body{
     background-size: cover;
 }
 
-#signUpTitle {
+#loginTitle {
     font-family: "Roboto Mono", monospace;
-    text-align: center;
+    position: absolute;
+    right: 45px;
+    top: 10px;
 }
 
-#signupPage {
-    display: grid;
+#loginPage {
     position: absolute;
     inset: 50%;
     translate: -50% -50%;
@@ -20,15 +21,18 @@ body{
     background-color: rgb(43, 166, 182);
     border-radius: 10px;
     border-style: solid;
-    width: 350px;
-    height: 550px;
+    width: 450px;
+    height: 350px;
 }
 
 
 .inputBoxes {
+    position: relative;
     font-family: "Roboto Mono", monospace;
-    margin-left: 10px;
-    width: 300px;
+    left: 20px;
+    width: 320px;
+    height: 30px;
+    top: 160px;
     border-radius: 8px;
     border-style: solid;
     border-color: black;
@@ -36,10 +40,19 @@ body{
 
 .inputLabels {
     font-family: "Roboto Mono", monospace;
-    margin-left: 10px;
+    position: relative;
+    left: 15px;
+    top: 160px;
 }
 
-#additionalInfoLabel {
-    bottom: 5px;
+#loginButton {
+    font-family: "Roboto Mono", monospace;
+    background-color: rgb(2, 225, 255);
+    border: 1px;
+    border-radius: 6px;
+    width: 400px;
+    height: 50px;
     position: relative;
+    top: 180px;
+    left: 27px;
 }
