@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/patientLogin.css">
+</head>
+
+<body>
+    <form id="loginPage" action="index.php" method="POST">
+        <label for="Log In Title" id="loginTitle" style="font-size: 50px;">
+            <pre>
+                PATIENT LOGIN
+            </pre>
+        </label>
+
+        <label for="Username" id="usernameLabel" class="inputLabels" style="font-size: medium;">
+            <b>Username: </b>
+        </label>
+        <input type="text" id="inputUsername" class="inputBoxes" placeholder="Enter username" required><br><br><br>
+
+        <label for="Password" id="passwordLabel" class="inputLabels" style="font-size: medium;">
+           <b>Password: </b>
+        </label>
+        <input type="text" id="inputPassword" class="inputBoxes" placeholder="Enter password" minlength="7" required>
+
+        <button type="submit" id="loginButton" style="font-size: large;">
+            LOGIN
+        </button>
+    </form>
+</body>

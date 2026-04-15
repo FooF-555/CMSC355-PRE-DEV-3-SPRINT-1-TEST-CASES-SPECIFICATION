@@ -1,0 +1,58 @@
+body{
+    background-image: url(../Pictures/background\ image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#loginTitle {
+    font-family: "Roboto Mono", monospace;
+    position: absolute;
+    right: 45px;
+    top: 10px;
+}
+
+#loginPage {
+    position: absolute;
+    inset: 50%;
+    translate: -50% -50%;
+    border: 3px;
+    background-color: rgb(43, 166, 182);
+    border-radius: 10px;
+    border-style: solid;
+    width: 450px;
+    height: 350px;
+}
+
+
+.inputBoxes {
+    position: relative;
+    font-family: "Roboto Mono", monospace;
+    left: 20px;
+    width: 320px;
+    height: 30px;
+    top: 160px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: black;
+}
+
+.inputLabels {
+    font-family: "Roboto Mono", monospace;
+    position: relative;
+    left: 15px;
+    top: 160px;
+}
+
+#loginButton {
+    font-family: "Roboto Mono", monospace;
+    background-color: rgb(2, 225, 255);
+    border: 1px;
+    border-radius: 6px;
+    width: 400px;
+    height: 50px;
+    position: relative;
+    top: 180px;
+    left: 27px;
+}

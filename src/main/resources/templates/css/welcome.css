@@ -1,0 +1,30 @@
+body{
+    background-image: url(../Pictures/background\ image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 70px;
+    position: absolute;
+    inset: 50%;
+    translate: -50% -90%;
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    animation: fadeIn 1s, hoverUp 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+@keyframes hoverUp {
+    from{transform: translateY(30%)}
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1}
+}

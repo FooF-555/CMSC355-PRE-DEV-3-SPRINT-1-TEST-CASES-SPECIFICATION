@@ -1,0 +1,81 @@
+body{
+    background-image: url(../Pictures/background\ image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#signUpTitle {
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+}
+
+#signupPage {
+    display: grid;
+    position: absolute;
+    inset: 50%;
+    translate: -50% -50%;
+    border: 3px;
+    background-color: rgb(43, 166, 182);
+    border-radius: 10px;
+    border-style: solid;
+    width: 350px;
+    height: 600px;
+}
+
+
+.inputBoxes {
+    font-family: "Roboto Mono", monospace;
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: black;
+}
+
+.inputLabels {
+    font-family: "Roboto Mono", monospace;
+    margin-left: 10px;
+}
+
+#additionalInfoLabel {
+    bottom: 5px;
+    position: relative;
+}
+
+#additionalInfoInput {
+    margin-bottom: 30px;
+    resize: none;
+}
+
+#resetButton {
+    background-color: rgb(122, 255, 244);
+    border-color: rgb(32, 75, 71);
+    border-style: solid;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    position: absolute;
+    left: 35px;
+    bottom: 7px;
+}
+
+#resetButton:hover {
+    background-color: rgb(0, 195, 255);
+}
+
+#submitButton:hover {
+    background-color: rgb(0, 195, 255);
+}
+
+#submitButton {
+    background-color: rgb(122, 255, 244);
+    border-color: rgb(32, 75, 71);
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    position: absolute;
+    right: 35px;
+    bottom: 7px;
+}
