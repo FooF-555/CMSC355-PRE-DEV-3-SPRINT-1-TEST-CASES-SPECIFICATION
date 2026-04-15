@@ -1,15 +1,32 @@
 package com.example.demo;
 
+import com.example.demo.mongoclasses.PatientAccount;
+import com.example.demo.mongoclasses.PatientAccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-public class Demo1Application {
+@EnableMongoRepositories
+public class Demo1Application implements CommandLineRunner{
+
+    @Autowired
+    PatientAccountRepository patientRepo;
 
     public static void main(String[] args) {
+
         SpringApplication.run(Demo1Application.class, args);
     }
 
-}
+    @Override
+    public void run(String... args){
+        smth();
+    }
 
+    public void smth(){
+        patientRepo.save(new PatientAccount("first", "last", "p", "d@mail.com",
+                99, "g", "f", 2, "home", 123));
+    }
+}

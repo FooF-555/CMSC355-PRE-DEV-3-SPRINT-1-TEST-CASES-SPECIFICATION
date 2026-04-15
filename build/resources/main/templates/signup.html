@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <form id="signupPage" action="index.php" method="POST" style>
+        <label for="Username" id="usernameLabel" class="inputLabel" style="font-size: medium;">
+            <b>Username: </b>
+        </label>
+        <input type="text" id="inputUsername" class="inputBox" placeholder="Enter username here" required><br>
+
+        <label for="Password" id="passwordLabel" class="inputLabel" style="font-size: medium;">
+           <b>Password: </b>
+        </label>
+        <input type="password" id="inputPassword" class="inputBox" placeholder="Enter password here" minlength="7" required><br>
+
+        <label for="Date of Birth" id="dobLabel" class="inputLabel" aria-required style="font-size: medium;">
+            <b>Date of Birth: </b>
+        </label>
+        <input type="date" id="inputDOB" class="inputBox" required><br>
+
+        <label for="Email" id="emailLabel" class="inputLabel" style="font-size: medium;">
+            <b>Email Address: </b>
+        </label>
+        <input type="email" id="inputEmail" class="inputBox" placeholder="Enter email address here" required><br>
+
+        <label for="Phone Number" id="phoneLabel" class="inputLabel" style="font-size: medium;">
+            <b>Phone Number: </b>
+        </label>
+        <input type="tel" id="inputPhone" class="inputBox" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+        
+       
+        <label for="Gender" id="genderLabel" class="inputLabel">
+            <b>Gender: </b>
+
+        <label for="Male">
+            <i>Male</i>
+        </label>
+        <input type="radio" id="Male" value="Male" name="Gender">
+        <label for="Female">
+            <i>Female</i>
+        </label>
+        <input type="radio" id="Female" value="Female" name="Gender">
+
+        <label for="Other">
+            <i>Other</i>
+        </label>
+        <input type="radio" id="Other" name="Gender"><br><br>
+
+        <label for="AdditionalInfo" id="additionalInfoLabel" style="font-size: medium;">
+            <b>Additional Info: </b>
+        </label>
+        <textarea id="additionalInfo" id="inputAdditionalInfo" class="inputBox" rows="2" cols="25" placeholder="Enter here any additional information we should know about"></textarea><br><br>
+
+        <button type="reset" id="resetLabel">
+            <i>Reset</i>
+        </button>
+
+        <!--This doesn't do anything at the moment-->
+        <!-- Supposed to direct you to the patient/physician dashboard page-->
+        <button type="submit" id="submitLabel">
+            <i>Create Account</i>
+        </button>
+    </form>
+
+
+</body>
