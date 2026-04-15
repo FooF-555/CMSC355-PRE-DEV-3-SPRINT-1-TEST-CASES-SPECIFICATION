@@ -10,8 +10,8 @@
 <body>
     <!-- Form/Sign up stuff -->
     <form action="/create" id="signupPage" action="index.php" method="post" style>
-        <label for="Sign Up Title" id="signUpTitle" style="font-size: 50px;">
-            Sign Up
+        <label for="Sign Up Title" id="signUpTitle" style="font-size: 40px;">
+            <b>Sign Up</b>
         </label>
         <label for="First Name" id="firstNameLabel" class="inputLabels" style="font-size: medium;">
             <b>Username: </b>
@@ -50,21 +50,21 @@
         <label for="Male">
             <i>Male</i>
         </label>
-        <input type="radio" id="Male" value="Male" name="Gender">
+        <input type="radio" id="Male" value="Male" name="Gender" class="genderInputs">
         <label for="Female">
             <i>Female</i>
         </label>
-        <input type="radio" id="Female" value="Female" name="Gender">
+        <input type="radio" id="Female" value="Female" name="Gender" class="genderInputs">
 
         <label for="Other">
             <i>Other</i>
         </label>
-        <input type="radio" id="Other" name="Gender"><br><br>
+        <input type="radio" id="Other" name="Gender" class="genderInputs"><br><br>
 
         <label for="AdditionalInfo" id="additionalInfoLabel" style="font-size: medium;">
             <b>Additional Info: </b>
         </label>
-        <textarea id="additionalInfoInput" id="inputAdditionalInfo" class="inputBoxes" rows="2" cols="25" placeholder="Enter here any additional information we should know about"></textarea><br><br>
+        <textarea id="additionalInfoInput" id="inputAdditionalInfo" class="inputBoxes" rows="2" cols="25" placeholder="Enter here any additional information that should be known"></textarea><br><br>
 
         <button type="reset" id="resetButton">
             <i>Reset</i>

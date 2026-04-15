@@ -1,5 +1,5 @@
 body{
-    background-image: url(../Pictures/background\ image.jpg);
+    background-image: url(../Pictures/background\ image.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -7,7 +7,9 @@ body{
 }
 
 #signUpTitle {
-    font-family: "Roboto Mono", monospace;
+    color: white;
+    translate: 0% 5%;
+    font-family: "Roboto", sans-serif;
     text-align: center;
 }
 
@@ -16,26 +18,34 @@ body{
     position: absolute;
     inset: 50%;
     translate: -50% -50%;
+
     border: 3px;
     background-color: rgb(43, 166, 182);
+    border-color: rgb(43, 166, 182);
     border-radius: 10px;
-    border-style: solid;
+    border-style: outset;
+
     width: 350px;
     height: 600px;
+    animation: fadeIn 1s, hoverUp 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 
 .inputBoxes {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Roboto", sans-serif;
     margin-left: 10px;
     width: 300px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: black;
+    height: 25px;
+    border-radius: 4px;
+    border-style: outset;
+    border-color: rgb(206, 206, 206);
 }
 
 .inputLabels {
-    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-family: "Roboto", sans-serif;
     margin-left: 10px;
 }
 
@@ -50,11 +60,14 @@ body{
 }
 
 #resetButton {
-    background-color: rgb(122, 255, 244);
-    border-color: rgb(32, 75, 71);
-    border-style: solid;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(0, 216, 198);
+    border-color: rgb(0, 216, 198);
+    border-style: outset;
     width: 100px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
     position: absolute;
     left: 35px;
@@ -62,20 +75,32 @@ body{
 }
 
 #resetButton:hover {
-    background-color: rgb(0, 195, 255);
+    background-color: rgb(68, 253, 238);
 }
 
 #submitButton:hover {
-    background-color: rgb(0, 195, 255);
+    background-color: rgb(68, 253, 238);
 }
 
 #submitButton {
-    background-color: rgb(122, 255, 244);
-    border-color: rgb(32, 75, 71);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background-color: rgb(0, 216, 198);
+    border-color: rgb(0, 216, 198);
     width: 150px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
     position: absolute;
     right: 35px;
     bottom: 7px;
+}
+
+@keyframes hoverUp {
+    from{transform: translateY(5%)}
+}
+
+
+@keyframes fadeIn {
+    100%{opacity: 1}
 }
