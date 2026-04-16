@@ -1,0 +1,85 @@
+body{
+    background-image: url(../images/background\ image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#logo {
+    position: absolute;
+    height: 130px;
+    inset: 50%;
+    translate: -53% -150%;
+    animation: fadeIn 1s, titleHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+#loginButton {
+    color: white;
+    position: absolute;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+
+    inset: 50%;
+    width: 250px;
+    height: 70px;
+    translate: -120% -15%;
+
+    text-align: center;
+
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#loginButton:hover {
+    background-color: rgb(0, 195, 255);
+    transform: translateY(-10%);
+    opacity: 1;
+}
+
+#signupButton {
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+    inset: 50%;
+    width: 250px;
+    height: 70px;
+    translate: 20% -15%;
+    text-align: center;
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#signupButton:hover {
+    background-color: rgb(0, 195, 255);
+    transform: translateY(-10%);
+    opacity: 1;
+}
+
+@keyframes titleHover {
+    from{transform: translateY(30%)}
+}
+
+@keyframes buttonIntroHover {
+    from{transform: translateY(50%)}
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1}
+}
