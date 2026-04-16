@@ -1,5 +1,5 @@
 body{
-    background-image: url(../Pictures/background\ image.png);
+    background-image: url(../images/background\ image.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -48,6 +48,8 @@ body{
     font-family: "Roboto", sans-serif;
     margin-left: 10px;
 }
+
+.gender
 
 #additionalInfoLabel {
     bottom: 5px;
