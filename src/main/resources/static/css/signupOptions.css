@@ -1,0 +1,100 @@
+body{
+    background-image: url(../Pictures/background\ image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(20, 197, 159);
+    background-image: linear-gradient(to right, rgb(0, 255, 179), rgb(149, 248, 252));
+
+    background-clip: text;
+    color: transparent;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+
+    text-align: center;
+    position: absolute;
+    inset: 50%;
+    translate: -45% -450%;
+    
+    animation: fadeIn 1s, titleHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+    width: 800px;
+    height: 55px;
+}
+
+#patientButton {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    inset: 50%;
+    translate: -110% -160%;
+
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    width: 250px;
+    height: 70px;
+}
+
+#physicianButton {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    inset: 50%;
+    translate: 30% -160%;
+
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+    width: 250px;
+    height: 70px;
+}
+
+#patientButton:hover {
+    background-color: rgb(0, 195, 255);
+    transform: translateY(-10%);
+    opacity: 1;
+}
+
+#physicianButton:hover {
+    background-color: rgb(0, 195, 255);
+    transform: translateY(-10%);
+    opacity: 1;
+}
+
+@keyframes hoverUp {
+    to{transform: translateY(-10%)}
+}
+
+@keyframes titleHover {
+    from{transform: translateY(30%)}
+}
+
+@keyframes buttonIntroHover {
+    from{transform: translateY(50%)}
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1}
+}

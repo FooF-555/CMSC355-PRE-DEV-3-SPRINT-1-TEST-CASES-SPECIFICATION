@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-
 @Controller
 public class WebController {
     @GetMapping("/loginOptions")
@@ -27,19 +26,18 @@ public class WebController {
         return "signup";
     }
     
-
-/*  @GetMapping("/signupOptions")
+    @GetMapping("/signupOptions")
     public String showSignUpOptions() {
         return "signupOptions";
     }
 
-    @GetMapping("/signupPatient")
+    @GetMapping("/patientSignUp")
     public String showPatientSignUp() {
-        return "signupPatient";
+        return "patientSignUp";
     }
 
-    @GetMapping("/signupPhysician")
+    @GetMapping("/physicianSignUp")
     public String showPhysicianSignUp() {
         return "physicianSignUp";
-    } */
+    }
 }
