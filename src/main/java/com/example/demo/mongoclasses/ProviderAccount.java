@@ -29,4 +29,13 @@ public class ProviderAccount extends Account{
         }
         return false;
     }
+
+    //for REQ2
+    public void sendMessage(String message, PatientAccount patient){
+        if (checkForPatientStatus(patient)){
+            patient.addNote(new ProviderNote(this, patient, message, "00/00/0000"));
+        } else {
+            //something about patient not connected to provider
+        }
+    }
 }
