@@ -8,6 +8,7 @@ public class PatientAccount extends Account{
     //idk if this will be used
     private final int userID;
 
+    //will this include a notes String<> ?
     public PatientAccount(String firstName, String lastName, String password, String email, int age, String gender, String dateOfBirth, int phoneNumber, String homeAddress, int userID) {
         super(firstName, lastName, password, email, age, gender, dateOfBirth, phoneNumber, homeAddress);
         this.userID = userID;
