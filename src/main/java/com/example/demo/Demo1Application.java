@@ -28,5 +28,7 @@ public class Demo1Application implements CommandLineRunner{
     public void smth(){
         patientRepo.save(new PatientAccount("first", "last", "p", "d@mail.com",
                 99, "g", "f", 2, "home", 123));
+        PatientAccount patient = patientRepo.findAccByName("first");
+        System.out.println(patient.getUserID());
     }
 }
