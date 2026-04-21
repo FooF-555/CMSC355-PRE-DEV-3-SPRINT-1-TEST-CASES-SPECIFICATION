@@ -31,6 +31,7 @@ public class Demo1Application implements CommandLineRunner{
                 99, "g", "f", 2, "home", 123));
         PatientAccount patient = patientRepo.findAccByName("first");
 
-        ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", )
+        ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", "f", 2
+        , "hose", 456);
     }
 }
