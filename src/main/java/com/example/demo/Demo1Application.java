@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.mongoclasses.PatientAccount;
 import com.example.demo.mongoclasses.PatientAccountRepository;
+import com.example.demo.mongoclasses.ProviderAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -29,6 +30,7 @@ public class Demo1Application implements CommandLineRunner{
         patientRepo.save(new PatientAccount("first", "last", "p", "d@mail.com",
                 99, "g", "f", 2, "home", 123));
         PatientAccount patient = patientRepo.findAccByName("first");
-        System.out.println(patient.getUserID());
+
+        ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", )
     }
 }
