@@ -1,7 +1,10 @@
 package com.example.demo.mongoclasses;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 
+@Document("ProviderAccounts")
 public class ProviderAccount extends Account{
     ArrayList<PatientAccount> connectedPatients;
 
