@@ -13,7 +13,7 @@ public class Account {
     protected String dateOfBirth; // In the form of MM/DD/YYYY
     protected int phoneNumber;
     protected String homeAddress;
-
+    
     public Account(String firstName, String lastName, String password, String email, int age, String gender, String dateOfBirth, int phoneNumber, String homeAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,7 +26,7 @@ public class Account {
     }
 
 
-        public String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 

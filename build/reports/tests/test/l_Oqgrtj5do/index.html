@@ -62,7 +62,7 @@
 </td>
 <td>
 <div class="infoBox duration">
-<div class="counter">7.102s</div>
+<div class="counter">4.302s</div>
 <p>duration</p>
 </div>
 </td>
@@ -92,12 +92,14 @@
 </tr>
 </thead>
 <tr>
-<td class="success">contextLoads()</td>
+<td class="success">
+<a href="f9ZdqPj7kYc.html">contextLoads()</a>
+</td>
 <td class="path" hidden="">contextLoads()</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>1.278s</td>
+<td>0.728s</td>
 <td class="success">100%</td>
 </tr>
 </table>
@@ -106,10 +108,10 @@
 <div class="tab">
 <h2>standard output</h2>
 <span class="code">
-<pre id="root-0-test-stdout-com.example.demo.Demo1ApplicationTests">01:04:19.490 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.Demo1ApplicationTests]: Demo1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-01:04:19.637 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.Demo1Application for test class com.example.demo.Demo1ApplicationTests
-01:04:19.772 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.Demo1ApplicationTests]: Demo1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-01:04:19.774 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.Demo1Application for test class com.example.demo.Demo1ApplicationTests
+<pre id="root-0-test-stdout-com.example.demo.Demo1ApplicationTests">22:09:16.889 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.Demo1ApplicationTests]: Demo1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:09:17.024 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.Demo1Application for test class com.example.demo.Demo1ApplicationTests
+22:09:17.115 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.Demo1ApplicationTests]: Demo1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:09:17.117 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.Demo1Application for test class com.example.demo.Demo1ApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -120,35 +122,19 @@
 
  :: Spring Boot ::                (v4.0.5)
 
-2026-04-16T01:04:20.325-04:00  INFO 33376 --- [demo1] [    Test worker] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests using Java 17.0.12 with PID 33376 (started by decen in C:\Users\decen\OneDrive\Documentos\GitHub\CMSC355-PRE-DEV-3-SPRINT-1-TEST-CASES-SPECIFICATION)
-2026-04-16T01:04:20.328-04:00  INFO 33376 --- [demo1] [    Test worker] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-04-16T01:04:21.096-04:00  INFO 33376 --- [demo1] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-04-16T01:04:21.123-04:00  INFO 33376 --- [demo1] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
-2026-04-16T01:04:21.962-04:00  INFO 33376 --- [demo1] [    Test worker] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
-2026-04-16T01:04:23.932-04:00  INFO 33376 --- [demo1] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-
-com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.6.4.jar:na]
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.6.4.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.6.4.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.6.4.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.6.4.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.6.4.jar:na]
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
-	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.6.4.jar:na]
-	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.6.4.jar:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.6.4.jar:na]
-	... 4 common frames omitted
-
-2026-04-16T01:04:23.943-04:00  INFO 33376 --- [demo1] [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {&quot;driver&quot;: {&quot;name&quot;: &quot;mongo-java-driver|spring-boot|sync&quot;, &quot;version&quot;: &quot;5.6.4&quot;}, &quot;os&quot;: {&quot;type&quot;: &quot;Windows&quot;, &quot;name&quot;: &quot;Windows 11&quot;, &quot;architecture&quot;: &quot;amd64&quot;, &quot;version&quot;: &quot;10.0&quot;}, &quot;platform&quot;: &quot;Java/Oracle Corporation/17.0.12+8-LTS-286&quot;} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5c9a4f3b, com.mongodb.Jep395RecordCodecProvider@2bb0e277, com.mongodb.KotlinCodecProvider@6f24ce45, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-04-16T01:04:25.025-04:00  INFO 33376 --- [demo1] [    Test worker] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 5.018 seconds (process running for 6.877)
+2026-04-20T22:09:17.473-04:00  INFO 31612 --- [demo1] [    Test worker] com.example.demo.Demo1ApplicationTests   : Starting Demo1ApplicationTests using Java 21.0.10 with PID 31612 (started by decen in C:\Users\decen\OneDrive\Desktop\test\CMSC355-PRE-DEV-3-SPRINT-1-TEST-CASES-SPECIFICATION)
+2026-04-20T22:09:17.476-04:00  INFO 31612 --- [demo1] [    Test worker] com.example.demo.Demo1ApplicationTests   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-04-20T22:09:17.889-04:00  INFO 31612 --- [demo1] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-04-20T22:09:17.928-04:00  INFO 31612 --- [demo1] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 2 MongoDB repository interfaces.
+2026-04-20T22:09:18.537-04:00  INFO 31612 --- [demo1] [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {&quot;application&quot;: {&quot;name&quot;: &quot;Cluster0&quot;}, &quot;driver&quot;: {&quot;name&quot;: &quot;mongo-java-driver|spring-boot|sync&quot;, &quot;version&quot;: &quot;5.6.4&quot;}, &quot;os&quot;: {&quot;type&quot;: &quot;Windows&quot;, &quot;name&quot;: &quot;Windows 11&quot;, &quot;architecture&quot;: &quot;amd64&quot;, &quot;version&quot;: &quot;10.0&quot;}, &quot;platform&quot;: &quot;Java/Oracle Corporation/21.0.10+8-LTS-217&quot;} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='dawsonlp_db_user', source='admin', password=&lt;hidden&gt;, mechanismProperties=&lt;hidden&gt;}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37b01ce2, com.mongodb.Jep395RecordCodecProvider@1a88c4f5, com.mongodb.KotlinCodecProvider@1894fa9f, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.9vmlfov.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-ayj4mp-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-04-20T22:09:18.542-04:00  INFO 31612 --- [demo1] [fov.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-f5dlezh-shard-00-00.9vmlfov.mongodb.net:27017 to client view of cluster
+2026-04-20T22:09:18.566-04:00  INFO 31612 --- [demo1] [fov.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-f5dlezh-shard-00-01.9vmlfov.mongodb.net:27017 to client view of cluster
+2026-04-20T22:09:18.566-04:00  INFO 31612 --- [demo1] [fov.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017 to client view of cluster
+2026-04-20T22:09:19.505-04:00  INFO 31612 --- [demo1] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=500539400, minRoundTripTimeNanos=0, setName='atlas-ayj4mp-shard-0', canonicalAddress=ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017, hosts=[ac-f5dlezh-shard-00-01.9vmlfov.mongodb.net:27017, ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017, ac-f5dlezh-shard-00-00.9vmlfov.mongodb.net:27017], passives=[], arbiters=[], primary='ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022c, setVersion=280, topologyVersion=TopologyVersion{processId=69d11116510340566c9f2c02, counter=7}, lastWriteDate=Mon Apr 20 22:08:25 EDT 2026, lastUpdateTimeNanos=25226329048900}
+2026-04-20T22:09:19.505-04:00  INFO 31612 --- [demo1] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-f5dlezh-shard-00-01.9vmlfov.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=500428500, minRoundTripTimeNanos=0, setName='atlas-ayj4mp-shard-0', canonicalAddress=ac-f5dlezh-shard-00-01.9vmlfov.mongodb.net:27017, hosts=[ac-f5dlezh-shard-00-01.9vmlfov.mongodb.net:27017, ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017, ac-f5dlezh-shard-00-00.9vmlfov.mongodb.net:27017], passives=[], arbiters=[], primary='ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=280, topologyVersion=TopologyVersion{processId=69d113d18b43dfbb1f28d768, counter=4}, lastWriteDate=Mon Apr 20 22:08:25 EDT 2026, lastUpdateTimeNanos=25226329037900}
+2026-04-20T22:09:19.505-04:00  INFO 31612 --- [demo1] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-f5dlezh-shard-00-00.9vmlfov.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=490788200, minRoundTripTimeNanos=0, setName='atlas-ayj4mp-shard-0', canonicalAddress=ac-f5dlezh-shard-00-00.9vmlfov.mongodb.net:27017, hosts=[ac-f5dlezh-shard-00-01.9vmlfov.mongodb.net:27017, ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017, ac-f5dlezh-shard-00-00.9vmlfov.mongodb.net:27017], passives=[], arbiters=[], primary='ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=280, topologyVersion=TopologyVersion{processId=69d10e95206032972beeb8d8, counter=5}, lastWriteDate=Mon Apr 20 22:08:25 EDT 2026, lastUpdateTimeNanos=25226329037900}
+2026-04-20T22:09:19.511-04:00  INFO 31612 --- [demo1] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-f5dlezh-shard-00-02.9vmlfov.mongodb.net:27017 with max election id 7fffffff000000000000022c and max set version 280
+2026-04-20T22:09:19.818-04:00  INFO 31612 --- [demo1] [    Test worker] com.example.demo.Demo1ApplicationTests   : Started Demo1ApplicationTests in 2.621 seconds (process running for 4.258)
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stdout-com.example.demo.Demo1ApplicationTests">Copy</button>
 </span>
@@ -163,7 +149,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.4.1</a> at Apr 16, 2026, 1:04:26 AM</p>
+<a href="https://www.gradle.org">Gradle 9.4.1</a> at Apr 20, 2026, 10:09:21 PM</p>
 </div>
 </div>
 </body>
