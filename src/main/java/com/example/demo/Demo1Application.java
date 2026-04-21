@@ -3,6 +3,7 @@ package com.example.demo;
 import com.example.demo.mongoclasses.PatientAccount;
 import com.example.demo.mongoclasses.PatientAccountRepository;
 import com.example.demo.mongoclasses.ProviderAccount;
+import com.example.demo.mongoclasses.ProviderAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +16,9 @@ public class Demo1Application implements CommandLineRunner{
 
     @Autowired
     PatientAccountRepository patientRepo;
+
+    @Autowired
+    ProviderAccountRepository providerRepo;
 
     public static void main(String[] args) {
 
@@ -33,5 +37,16 @@ public class Demo1Application implements CommandLineRunner{
 
         ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", "f", 2
                 , "hose", 456);
+
+        providerRepo.save(doc);
+
+        doc.addPatient(patient);
+        providerRepo.save(doc);//saves the changes done by method call
+
+        System.out.println(doc.checkForPatientStatus(patient));
+
     }
+
+
+
 }
