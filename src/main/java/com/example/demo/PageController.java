@@ -17,10 +17,13 @@ public class PageController {
         return "login";
     }
 
+    /*
     @GetMapping("/signup")
     public String showSignUpPage() {
         return "signup";
     }
+
+     */
 
     @GetMapping("/dashboard")
     public String showDashboard() {
