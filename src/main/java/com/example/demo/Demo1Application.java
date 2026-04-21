@@ -1,11 +1,14 @@
 package com.example.demo;
 
+import java.time.LocalDate;
+
 import com.example.demo.mongoclasses.PatientAccount;
 import com.example.demo.mongoclasses.PatientAccountRepository;
 import com.example.demo.mongoclasses.ProviderAccount;
 import com.example.demo.mongoclasses.ProviderAccountRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+/* import org.springframework.boot.CommandLineRunner; */
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -32,10 +35,10 @@ public class Demo1Application {
 
     public void smth(){
         patientRepo.save(new PatientAccount("first", "last", "p", "d@mail.com",
-                99, "g", "f", 2, "home", 123));
+                99, "g", LocalDate.now(), "123-456-7890", "other info", 123));
         PatientAccount patient = patientRepo.findAccByName("first");
 
-        ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", "f", 2
+        ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", LocalDate.now(), "123-456-7890"
                 , "hose", 456);
 
         providerRepo.save(doc);

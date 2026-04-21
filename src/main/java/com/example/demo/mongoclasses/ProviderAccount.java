@@ -1,12 +1,13 @@
 package com.example.demo.mongoclasses;
 
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class ProviderAccount extends Account{
     ArrayList<PatientAccount> connectedPatients;
 
-    public ProviderAccount(String firstName, String lastName, String password, String email, int age, String gender, String dateOfBirth, int phoneNumber, String homeAddress, int userID) {
-        super(firstName, lastName, password, email, age, gender, dateOfBirth, phoneNumber, homeAddress);
+    public ProviderAccount(String firstName, String lastName, String password, String email, int age, String gender, LocalDate dateOfBirth, String phoneNumber, String additionalInfo, int userID) {
+        super(firstName, lastName, password, email, age, gender, dateOfBirth, phoneNumber, additionalInfo);
         this.connectedPatients = new ArrayList<>();
 
     }

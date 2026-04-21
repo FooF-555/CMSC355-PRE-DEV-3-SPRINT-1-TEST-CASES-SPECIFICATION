@@ -1,7 +1,9 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import com.example.demo.mongoclasses.PatientAccount;
 
 
 @Controller
@@ -32,7 +34,8 @@ public class WebController {
     }
 
     @GetMapping("/patientSignUp")
-    public String showPatientSignUp() {
+    public String showPatientSignUp(Model model) {
+        model.addAttribute("patient", new PatientAccount());
         return "patientSignUp";
     }
 

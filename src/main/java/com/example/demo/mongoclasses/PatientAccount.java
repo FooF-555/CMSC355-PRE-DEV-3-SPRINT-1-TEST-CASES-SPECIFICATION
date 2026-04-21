@@ -1,7 +1,7 @@
 package com.example.demo.mongoclasses;
 
 import java.util.ArrayList;
-
+import java.time.LocalDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("PatientAccounts")
@@ -10,12 +10,19 @@ public class PatientAccount extends Account{
     private final int userID;
     ArrayList<ProviderNote> providerNotes;
 
+    // Default constructor (testing atm)
+    public PatientAccount() {
+        super("John", "Smith", "test123", "test@gmail.com", 40, "Male", LocalDate.now(), "123-456-7890", "got paralyzed");
+        userID = 0;
+    }
+
     //will this include a notes String<> ?
     //for REQ1
-    public PatientAccount(String firstName, String lastName, String password, String email, int age, String gender, String dateOfBirth, int phoneNumber, String homeAddress, int userID) {
-        super(firstName, lastName, password, email, age, gender, dateOfBirth, phoneNumber, homeAddress);
+    public PatientAccount(String firstName, String lastName, String password, String email, int age, String gender, LocalDate dateOfBirth, String phoneNumber, String additionalInfo, int userID) {
+        super(firstName, lastName, password, email, age, gender, dateOfBirth, phoneNumber, additionalInfo);
         this.userID = userID;
     }
+    
 
     public int getUserID() {
         return userID;
@@ -29,7 +36,7 @@ public class PatientAccount extends Account{
         "\n// Gender: " + gender +
         "\n// Date of Birth: " + dateOfBirth +
         "\n// Phone Number: " + phoneNumber +
-        "\n// Home Address: " + homeAddress + "\n");
+        "\n// Additional Info: " + additionalInfo + "\n");
 
         return this;
     }

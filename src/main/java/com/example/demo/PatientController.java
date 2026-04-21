@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.mongoclasses.PatientAccountRepository;
 import com.example.demo.mongoclasses.PatientAccount;
+import com.example.demo.mongoclasses.PatientAccountRepository;
 
 @Controller
 public class PatientController {
@@ -14,7 +14,8 @@ public class PatientController {
     PatientAccountRepository patientRepo;
 
     @PostMapping("/patientSignUp")
-    public PatientAccount submitPatient(@ModelAttribute PatientAccount patient) {
-        return patientRepo.save(patient);
+    public String submitPatient(@ModelAttribute PatientAccount patient) {
+        patientRepo.save(patient);
+        return "Success!";
     }
 }
