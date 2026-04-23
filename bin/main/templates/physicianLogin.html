@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +26,8 @@
         </label>
         <input type="password" name="password" id="inputPassword" class="inputBoxes" placeholder="Enter password" minlength="7" required>
 
+        <p style="color:red;" th:if="${error}" th:text="${error}"></p>
+        
         <button type="submit" id="loginButton" style="font-size: large;">
             LOGIN
         </button>

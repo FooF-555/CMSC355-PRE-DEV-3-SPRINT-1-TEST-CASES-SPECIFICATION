@@ -6,33 +6,41 @@ body{
     background-size: cover;
 }
 
-h1 {
+#dashboardTitle {
     position: absolute;
-    height: 130px;
-    inset: 50%;
-    translate: -53% -150%;
-    animation: fadeIn 1s, titleHover 1s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+    height: 50px;
+    width: 500px;
+    inset: 0%;
+    translate: 10% 10%;
+    
+    border-style: outset;
+    border-color: rgb(112, 222, 255);
+    border-radius: 20px;
+
+    background-color: rgb(112, 222, 255);
+
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    text-align: center;
 }
 
 
-#loginButton {
+#dashboardBox {
     color: white;
     position: absolute;
 
     font-family: "Roboto", sans-serif;
     font-size: 30px;
 
-    border-color: rgb(71, 212, 255);
+    border-color: rgb(43, 166, 182);
     border-style: outset;
-    background-color: rgb(71, 212, 255);
+    background-color: rgb(43, 166, 182);
     border-radius: 20px;
 
+    width: 600px;
+    height: 400px;
     inset: 50%;
-    width: 250px;
-    height: 70px;
-    translate: -120% -15%;
+    translate: -39% -50%;
 
     text-align: center;
 
@@ -47,7 +55,7 @@ h1 {
     opacity: 1;
 }
 
-#signupButton {
+#yourDetails {
     position: absolute;
     color: white;
     font-family: "Roboto", sans-serif;
@@ -58,12 +66,74 @@ h1 {
     border-radius: 20px;
     inset: 50%;
     width: 250px;
-    height: 70px;
-    translate: 20% -15%;
+    height: 110px;
+    translate: -110% -100%;
     text-align: center;
-    animation: fadeIn 1s, buttonIntroHover 1s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+}
+
+
+#medications {
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+    inset: 50%;
+    width: 250px;
+    height: 110px;
+    translate: 10% -100%;
+    text-align: center;
+}
+
+#messageProvider {
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+    inset: 50%;
+    width: 250px;
+    height: 110px;
+    translate: -110% 40%;
+    text-align: center;
+}
+
+#messageProvider {
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+    inset: 50%;
+    width: 250px;
+    height: 110px;
+    translate: -110% 40%;
+    text-align: center;
+}
+
+#inbox {
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    border-color: rgb(71, 212, 255);
+    border-style: outset;
+    background-color: rgb(71, 212, 255);
+    border-radius: 20px;
+    inset: 50%;
+    width: 250px;
+    height: 110px;
+    translate: 10% 40%;
+    text-align: center;
 }
 
 #signupButton:hover {

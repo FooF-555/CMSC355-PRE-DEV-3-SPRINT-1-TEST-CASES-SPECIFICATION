@@ -21,7 +21,7 @@ public class LoginController {
         PatientAccount patient = patientRepo.findAccByName(firstName);
 
         if (patient != null && patient.getPassword().equals(password)) {
-            return "patientDashboard";
+            return "redirect:/patientDashboard";
         }
         else {
             model.addAttribute("error", "Invalid name/password!");
@@ -34,7 +34,7 @@ public class LoginController {
         ProviderAccount provider = providerRepo.findAccByName(firstName);
 
         if (provider != null && provider.getPassword().equals(password)) {
-            return "physicianDashboard";
+            return "redirect:/physicianDashboard";
         }
         else {
             model.addAttribute("error", "Invalid name/password!");
