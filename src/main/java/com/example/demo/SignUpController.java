@@ -5,17 +5,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.mongoclasses.PatientAccount;
-import com.example.demo.mongoclasses.PatientAccountRepository;
+import com.example.demo.mongoclasses.*;
 
 @Controller
-public class PatientController {
+public class SignUpController {
     @Autowired
     PatientAccountRepository patientRepo;
+
+    @Autowired
+    ProviderAccountRepository providerRepo;
 
     @PostMapping("/patientSignUp")
     public String submitPatient(@ModelAttribute PatientAccount patient) {
         patientRepo.save(patient);
-        return "Success!";
+        return "patientDashboard";
+    }
+
+    @PostMapping("/physicianSignUp")
+    public String submitPatient(@ModelAttribute ProviderAccount provider) {
+        providerRepo.save(provider);
+        return "physicianDashboard";
     }
 }

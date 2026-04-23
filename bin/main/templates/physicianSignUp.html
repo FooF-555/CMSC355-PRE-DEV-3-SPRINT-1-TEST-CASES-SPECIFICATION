@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/patientSignUp.css">
+</head>
+
+<body>
+    <form id="signupPage" action="/physicianSignUp" method="post">
+        <label for="Sign Up Title" id="signUpTitle" style="font-size: 40px;">
+            <b>Sign Up</b>
+        </label>
+        <label for="First Name" id="firstNameLabel" class="inputLabels" style="font-size: medium;">
+            <b>First Name: </b>
+        </label>
+        <input type="text" name="firstName" id="inputFirstName" class="inputBoxes" placeholder="Enter first name here" required><br>
+
+        <label for="Last Name" id="lastNameLabel" class="inputLabels" style="font-size: medium;">
+            <b>Last Name: </b>
+        </label>
+        <input type="text" name="lastName" id="inputLastName" class="inputBoxes" placeholder="Enter last name here" required><br>
+
+        <label for="Password" id="passwordLabel" class="inputLabels" style="font-size: medium;">
+           <b>Password: </b>
+        </label>
+        <input type="password" name="password" id="inputPassword" class="inputBoxes" placeholder="Enter password here" minlength="7" required><br>
+
+        <label for="Date of Birth" id="dobLabel" class="inputLabels" aria-required style="font-size: medium;">
+            <b>Date of Birth: </b>
+        </label>
+        <input type="date" name="dateOfBirth" id="inputDOB" class="inputBoxes" required><br>
+
+        <label for="Email" id="emailLabel" class="inputLabels" style="font-size: medium;">
+            <b>Email Address: </b>
+        </label>
+        <input type="email" name="email" id="inputEmail" class="inputBoxes" placeholder="Enter email address here" required><br>
+
+        <label for="Phone Number" id="phoneLabel" class="inputLabels" style="font-size: medium;">
+            <b>Phone Number: </b>
+        </label>
+        <input type="tel" name="phoneNumber" id="inputPhone" class="inputBoxes" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+        
+       <!------------------->
+        <label for="Gender" id="genderLabel" class="inputLabels">
+            <b>Gender: </b>
+
+        <label for="Male">
+            <i>Male</i>
+        </label>
+        <input type="radio" id="Male" value="Male" name="gender" class="genderInputs">
+
+        <label for="Female">
+            <i>Female</i>
+        </label>
+        <input type="radio" id="Female" value="Female" name="gender" class="genderInputs">
+
+        <label for="Other">
+            <i>Other</i>
+        </label>
+        <input type="radio" id="Other" name="gender" value="Other" class="genderInputs"><br><br>
+
+        <!----------------->
+        <label for="AdditionalInfo" id="additionalInfoLabel" style="font-size: medium;">
+            <b>Additional Info: </b>
+        </label>
+        <textarea id="additionalInfoInput" name="additionalInfo" class="inputBoxes" rows="2" cols="25" placeholder="Enter here any additional information that should be known"></textarea><br><br>
+
+        <button type="reset" id="resetButton">
+            <i>Reset</i>
+        </button>
+
+        <!--This doesn't do anything at the moment-->
+        <!-- Supposed to direct you to the patient/physician dashboard page-->
+        <button type="submit" id="submitButton">
+            <i>Create Account</i>
+        </button>
+    </form>
+
+</body>

@@ -6,7 +6,7 @@ body{
     background-size: cover;
 }
 
-#logo {
+h1 {
     position: absolute;
     height: 130px;
     inset: 50%;

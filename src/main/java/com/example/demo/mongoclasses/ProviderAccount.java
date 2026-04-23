@@ -6,10 +6,15 @@ import java.time.LocalDate;
 public class ProviderAccount extends Account{
     ArrayList<PatientAccount> connectedPatients;
 
+    // Default constructor (testing atm)
+    public ProviderAccount() {
+        super("Jane", "Doe", "test123", "test@gmail.com", 40, "Female", LocalDate.now(), "123-456-7890", "a physician");
+        this.connectedPatients = new ArrayList<>();
+    }
+
     public ProviderAccount(String firstName, String lastName, String password, String email, int age, String gender, LocalDate dateOfBirth, String phoneNumber, String additionalInfo, int userID) {
         super(firstName, lastName, password, email, age, gender, dateOfBirth, phoneNumber, additionalInfo);
         this.connectedPatients = new ArrayList<>();
-
     }
 
     public ArrayList<PatientAccount> getPatients(){
