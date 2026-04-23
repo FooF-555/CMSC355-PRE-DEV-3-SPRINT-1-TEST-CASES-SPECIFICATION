@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Demo1Application",
+            "request": "launch",
+            "mainClass": "com.example.demo.Demo1Application",
+            "projectName": "CMSC355-PRE-DEV-3-SPRINT-1-TEST-CASES-SPECIFICATION"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

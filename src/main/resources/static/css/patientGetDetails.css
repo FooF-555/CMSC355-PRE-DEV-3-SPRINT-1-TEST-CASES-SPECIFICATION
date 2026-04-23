@@ -1,0 +1,62 @@
+body{
+    background-image: url(../images/background\ image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#detailsTitle {
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    inset: 0%;
+    translate: 10% 10%;
+    
+    border-style: outset;
+    border-color: rgb(112, 222, 255);
+    border-radius: 20px;
+
+    background-color: rgb(112, 222, 255);
+
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+#detailsBox {
+    color: white;
+    position: absolute;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+
+    border-color: rgb(43, 166, 182);
+    border-style: outset;
+    background-color: rgb(43, 166, 182);
+    border-radius: 20px;
+
+    width: 600px;
+    height: 400px;
+    inset: 50%;
+    translate: -39% -50%;
+
+    text-align: center;
+
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes titleHover {
+    from{transform: translateY(30%)}
+}
+
+@keyframes buttonIntroHover {
+    from{transform: translateY(50%)}
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1}
+}

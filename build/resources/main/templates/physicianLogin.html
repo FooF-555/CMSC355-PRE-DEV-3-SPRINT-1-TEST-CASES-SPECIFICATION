@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 </head>
 
 <body>
-    <form id="loginPage" method="post">
+    <form action="/physicianLogin" id="loginPage" method="post">
         <label for="Log In Title" id="loginTitle" style="font-size: 50px;">
             <pre>
                 PHYSICIAN LOGIN
@@ -18,13 +19,15 @@
         <label for="Username" id="usernameLabel" class="inputLabels" style="font-size: medium;">
             <b>Username: </b>
         </label>
-        <input type="text" id="inputUsername" class="inputBoxes" placeholder="Enter username" required><br><br><br>
+        <input type="text" name="firstName" id="inputUsername" class="inputBoxes" placeholder="Enter username" required><br><br><br>
 
         <label for="Password" id="passwordLabel" class="inputLabels" style="font-size: medium;">
            <b>Password: </b>
         </label>
-        <input type="password" id="inputPassword" class="inputBoxes" placeholder="Enter password" minlength="7" required>
+        <input type="password" name="password" id="inputPassword" class="inputBoxes" placeholder="Enter password" minlength="7" required>
 
+        <p style="color:red;" th:if="${error}" th:text="${error}"></p>
+        
         <button type="submit" id="loginButton" style="font-size: large;">
             LOGIN
         </button>

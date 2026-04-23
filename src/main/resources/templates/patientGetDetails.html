@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+<!--   this is temporary  <link rel="stylesheet" href="../css/patientDashboard.css"> -->
+    <link rel="stylesheet" href="../static/css/patientGetDetails.css">
+
+</head>
+
+<body>
+    <p id="detailsBox">
+        <label id="detailsTitle">
+            Your Details
+        </label><br>
+
+        <label id="givenDetails">
+           <!-- to be filled-->>
+            <p>ID: <span th:text="${patient.id}"></span></p>
+            <p>First Name: <span th:text="${patient.firstName}"></span></p>
+            <p>Last Name: <span th:text="${patient.lastName}"></span></p>
+            <p>Email: <span th:text="${patient.email}"></span></p>
+            <p>Age: <span th:text="${patient.age}"></span></p>
+            <p>Gender: <span th:text="${patient.gender}"></span></p>
+            <p>Date of Birth: <span th:text="${patient.dateOfBirth}"></span></p>
+            <p>Phone: <span th:text="${patient.phoneNumber}"></span></p>
+            <p>Additional Information: <span th:text="${patient.additionalInfo}"></span></p>
+        </label>
+    </p>
+
+</body>
