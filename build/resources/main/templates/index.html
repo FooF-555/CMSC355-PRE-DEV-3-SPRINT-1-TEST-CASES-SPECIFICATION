@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
 
     <a href="/signupOptions">
         <button id="signupButton">
-            <b>SIGN UP</b>
+            <b>SIGN UP<b th:text="${name}"></b></b>
         </button>
     </a>
 </body>

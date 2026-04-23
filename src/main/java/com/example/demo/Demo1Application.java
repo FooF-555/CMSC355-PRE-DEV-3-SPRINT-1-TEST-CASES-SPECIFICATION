@@ -41,12 +41,18 @@ public class Demo1Application implements CommandLineRunner{
         providerRepo.save(doc);
 
         doc.addPatient(patient);
+        doc.sendMessage("this is your dooctor", patient);
         providerRepo.save(doc);//saves the changes done by method call
+        patientRepo.save(patient);
 
         System.out.println(doc.checkForPatientStatus(patient));
 
     }
 
+    public String test(){
+        PatientAccount patient = patientRepo.findAccByName("first");
+        return patient.getFullName();
+    }
 
 
 }

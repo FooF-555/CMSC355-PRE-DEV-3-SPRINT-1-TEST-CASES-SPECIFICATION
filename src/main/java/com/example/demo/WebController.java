@@ -1,9 +1,10 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
+//default is index.html
 @Controller
 public class WebController {
     @GetMapping("/loginOptions")
@@ -39,5 +40,11 @@ public class WebController {
     @GetMapping("/physicianSignUp")
     public String showPhysicianSignUp() {
         return "physicianSignUp";
+    }
+
+    @GetMapping("/")
+    public String showIndex(Model model){
+        model.addAttribute("name", "dr mann");
+        return "index";
     }
 }
