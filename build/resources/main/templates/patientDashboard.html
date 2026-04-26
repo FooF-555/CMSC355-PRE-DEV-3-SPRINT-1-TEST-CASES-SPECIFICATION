@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Dashboard</title>
-<!--   this is temporary  <link rel="stylesheet" href="../css/patientDashboard.css"> -->
-    <link rel="stylesheet" href="../static/css/patientDashboard.css">
+    <link rel="stylesheet" href="../css/patientDashboard.css">
+<!--     <link rel="stylesheet" href="../static/css/patientDashboard.css"> -->
 
 </head>
 
@@ -15,19 +15,21 @@
             Dashboard
         </label><br>
 
-        <button id="yourDetails" class="buttons">
-            Your Details
-        </button>
+        <a href="/patientGetDetails">
+            <button id="yourDetails" class="buttons">
+                Your Details
+            </button>
+        </a>
 
-        <button id="medications" class="buttons">
+        <button id="medications" class="buttons" href="/patientMedications">
             Medications
         </button>
 
-        <button id="messageProvider" class="buttons">
+        <button id="messageProvider" class="buttons" href="/messageProvider">
             Message Provider
         </button>
 
-        <button id="inbox" class="buttons">
+        <button id="inbox" class="buttons" href="/patientInbox">
             Inbox
         </button>
     </p>

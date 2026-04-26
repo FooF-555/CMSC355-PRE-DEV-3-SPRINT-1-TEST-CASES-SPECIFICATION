@@ -1,13 +1,14 @@
 package com.example.demo.mongoclasses;
 
-import java.util.ArrayList;
 import java.time.LocalDate;
+import java.util.ArrayList;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("PatientAccounts")
 public class PatientAccount extends Account{
     //idk if this will be used
-    private final int userID;
+    private int userID;
     ArrayList<ProviderNote> providerNotes;
 
     // Default constructor (testing atm)
@@ -26,6 +27,10 @@ public class PatientAccount extends Account{
 
     public int getUserID() {
         return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public PatientAccount getAccountDetails() {

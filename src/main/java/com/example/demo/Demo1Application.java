@@ -35,7 +35,7 @@ public class Demo1Application {
     public void smth(){
         patientRepo.save(new PatientAccount("first", "last", "p", "d@mail.com",
                 99, "g", LocalDate.now(), "123-456-7890", "other info", 123));
-        PatientAccount patient = patientRepo.findAccByName("first");
+        PatientAccount patient = patientRepo.findAccByEmail("d@mail.com");
 
         ProviderAccount doc = new ProviderAccount("f", "l", "p", "g@email.com", 9, "g", LocalDate.now(), "123-456-7890"
                 , "hose", 456);

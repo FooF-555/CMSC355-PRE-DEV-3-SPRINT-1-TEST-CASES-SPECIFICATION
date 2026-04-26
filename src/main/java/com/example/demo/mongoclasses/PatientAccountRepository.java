@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.repository.Query;
 
 public interface PatientAccountRepository extends MongoRepository<PatientAccount, String> {
 
-    @Query("{firstName:'?0'}")
-    PatientAccount findAccByName(String name);
+    @Query("{email:'?0'}")
+    PatientAccount findAccByEmail(String email);
 
 }

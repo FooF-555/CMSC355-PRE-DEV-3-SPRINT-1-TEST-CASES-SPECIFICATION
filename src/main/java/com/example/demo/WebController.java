@@ -8,8 +8,10 @@ import com.example.demo.mongoclasses.PatientAccount;
 import com.example.demo.mongoclasses.ProviderAccount;
 
 
+
 @Controller
 public class WebController {
+    // Login Options
     @GetMapping("/loginOptions")
     public String showLoginOptions() {
         return "loginOptions";
@@ -25,6 +27,7 @@ public class WebController {
         return "physicianLogin";
     }
 
+    // Sign Up Options 
     @GetMapping("/signupOptions")
     public String showSignUpOptions() {
         return "signupOptions";
@@ -42,11 +45,29 @@ public class WebController {
         return "physicianSignUp";
     }
 
+    // Patient Dashboard Navigation
     @GetMapping("/patientDashboard")
     public String showPatientDashboard() {
         return "patientDashboard";
     }
 
+    @GetMapping("/patientGetDetails")
+    public String showPatientYourDetails(Model model) {
+        PatientAccount patient = new PatientAccount();
+
+        // TEMP test data (just so page works)
+        patient.setUserID(123);
+        patient.setFirstName("John");
+        patient.setLastName("Doe");
+        patient.setEmail("john@example.com");
+        patient.setAge(25);
+
+        model.addAttribute("patient", patient);
+
+        return "patientGetDetails";
+    }
+
+    // Physician Dashboard Navigation
     @GetMapping("/physicianDashboard")
     public String showPhysicianDashboard() {
         return "physicianDashboard";

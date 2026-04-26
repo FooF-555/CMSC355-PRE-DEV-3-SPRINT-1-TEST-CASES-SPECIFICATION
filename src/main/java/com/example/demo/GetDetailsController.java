@@ -14,8 +14,8 @@ public class GetDetailsController {
     /* ProviderAccountRepository providerRepo; */
 
     @PostMapping("/patientGetDetails")
-    public String postMethodName(@RequestParam("firstName") String firstName, Model model) {
-        PatientAccount patient = patientRepo.findAccByName(firstName);
+    public String postMethodName(@RequestParam("firstName") String email, Model model) {
+        PatientAccount patient = patientRepo.findAccByEmail(email);
 
         model.addAttribute("patient", patient);
         return "patientGetDetails";
