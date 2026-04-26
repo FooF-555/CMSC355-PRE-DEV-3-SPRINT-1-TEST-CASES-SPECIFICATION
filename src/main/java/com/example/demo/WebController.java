@@ -51,22 +51,6 @@ public class WebController {
         return "patientDashboard";
     }
 
-    @GetMapping("/patientGetDetails")
-    public String showPatientYourDetails(Model model) {
-        PatientAccount patient = new PatientAccount();
-
-        // TEMP test data (just so page works)
-        patient.setUserID(123);
-        patient.setFirstName("John");
-        patient.setLastName("Doe");
-        patient.setEmail("john@example.com");
-        patient.setAge(25);
-
-        model.addAttribute("patient", patient);
-
-        return "patientGetDetails";
-    }
-
     // Physician Dashboard Navigation
     @GetMapping("/physicianDashboard")
     public String showPhysicianDashboard() {
