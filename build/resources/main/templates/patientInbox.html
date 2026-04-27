@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="../css/patientDashboard.css">
+    <!-- <link rel="stylesheet" href="../static/css/patientGetDetails.css"> -->
+
+</head>
+
+<body>
+    <label id="detailsBox">
+        <h2>Inbox</h2>
+
+        <div th:each="msg : ${messages}">
+            <p>
+                From: <span th:text="${msg.senderEmail}"></span><br>
+
+                <!-- go to messaging page -->
+                <a th:href="@{/messagePage(otherUser=${msg.senderEmail})}">
+                    Open Chat
+                </a>
+            </p>
+        </div>
+
+        <!-- start new message -->
+        <a href="/messagePage">
+            <button>New Message</button>
+        </a>
+    </label>
+
+</body>

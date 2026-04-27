@@ -5,7 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.mongoclasses.*;
+import com.example.demo.mongoclasses.PatientAccount;
+import com.example.demo.mongoclasses.PatientAccountRepository;
+import com.example.demo.mongoclasses.ProviderAccount;
+import com.example.demo.mongoclasses.ProviderAccountRepository;
 
 @Controller
 public class SignUpController {
@@ -18,12 +21,12 @@ public class SignUpController {
     @PostMapping("/patientSignUp")
     public String submitPatient(@ModelAttribute PatientAccount patient) {
         patientRepo.save(patient);
-        return "patientDashboard";
+        return "patientLogin";
     }
 
     @PostMapping("/physicianSignUp")
     public String submitPatient(@ModelAttribute ProviderAccount provider) {
         providerRepo.save(provider);
-        return "physicianDashboard";
+        return "physicianLogin";
     }
 }

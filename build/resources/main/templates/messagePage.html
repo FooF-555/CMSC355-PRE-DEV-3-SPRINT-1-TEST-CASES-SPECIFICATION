@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="../css/patientDashboard.css">
+    <!-- <link rel="stylesheet" href="../static/css/patientGetDetails.css"> -->
+
+</head>
+
+<body>
+    <label id="detailsBox">
+        <h2>Messaging</h2>
+
+        <!-- show conversation if exists -->
+        <div th:if="${messages != null}">
+            <div th:each="msg : ${messages}">
+                <p>
+                    <b th:text="${msg.senderEmail}"></b>:
+                    <span th:text="${msg.content}"></span>
+                </p>
+            </div>
+        </div>
+
+        <!-- send message -->
+        <form action="/sendMessage" method="post">
+            <input type="text" name="receiver" placeholder="Enter recipient email"
+                th:value="${otherUser}" required>
+
+            <input type="text" name="content" placeholder="Type message..." required>
+
+            <button type="submit">Send</button>
+        </form>
+    </label>
+
+</body>
