@@ -4,6 +4,12 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    gap: 40px;                 /* space between boxes */
+    height: 100vh;
 }
 
 h2 {
@@ -40,9 +46,8 @@ h2 {
     border-style: outset;
     border-color: rgb(43, 166, 182);
     border-radius: 20px;
-    inset: 50%;
-    translate: 140% 20%;
     
+    translate: 70% -2%;
     overflow-y: auto; /* scroll if too many messages */
 
     animation: fadeIn 1s, buttonIntroHover 1s;
