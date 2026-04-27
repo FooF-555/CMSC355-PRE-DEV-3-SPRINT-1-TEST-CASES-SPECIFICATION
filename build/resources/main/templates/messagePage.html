@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Dashboard</title>
-    <link rel="stylesheet" href="../css/patientDashboard.css">
-    <!-- <link rel="stylesheet" href="../static/css/patientGetDetails.css"> -->
+    <link rel="stylesheet" href="../css/messagePage.css">
+    <!-- <link rel="stylesheet" href="../static/css/messagePage.css"> -->
 
 </head>
 
 <body>
-    <label id="detailsBox">
-        <h2>Messaging</h2>
-
-        <!-- show conversation if exists -->
-        <div th:if="${messages != null}">
-            <div th:each="msg : ${messages}">
-                <p>
-                    <b th:text="${msg.senderEmail}"></b>:
-                    <span th:text="${msg.content}"></span>
-                </p>
-            </div>
-        </div>
+    <label id="box">
+        <h2>Compose Message</h2>
 
         <!-- send message -->
-        <form action="/sendMessage" method="post">
-            <input type="text" name="receiver" placeholder="Enter recipient email"
+        <form action="/sendMessage" id="messageForm" method="post">
+            <label class="labels" id="recepientLabel">
+                Recepient Address
+            </label><br>
+            <input type="text" class="inputBoxes" id="recepientInput" name="receiver" placeholder="Enter recipient email"
                 th:value="${otherUser}" required>
+            <br>
+            <label class="labels" id="messageLabel">
+                Message
+            </label>
+            <textarea class="inputBoxes" rows="2" cols="25" id="messageInput" name="content" placeholder="Type message here" required></textarea><br>
 
-            <input type="text" name="content" placeholder="Type message..." required>
-
-            <button type="submit">Send</button>
+            <button id="sendButton" type="submit">
+                SEND
+            </button>
         </form>
     </label>
 
+    <!-- show conversation if exists -->
+    <div id="shownMessages">
+        <div id="yourMessagesTitle">
+            Your Messages
+        </div>
+        <div th:if="${messages != null}">
+            <div th:each="msg : ${messages}">
+                <p>
+                    <div id="senderEmail">
+                        <b th:text="${msg.senderEmail}"></b>
+                    </div>
+                    
+                    <div id="messageContents">
+                        <span  th:text="${msg.content}"></span>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
+</html>

@@ -1,0 +1,158 @@
+body{
+    background-image: url(../images/background\ image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#box {
+    color: rgb(255, 255, 255);
+    position: absolute;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+
+    border-color: rgb(43, 166, 182);
+    border-style: outset;
+    background-color: rgb(43, 166, 182);
+    border-radius: 20px;
+
+    width: 600px;
+    height: 450px;
+    inset: 50%;
+    translate: -95% -50%;
+
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#shownMessages {
+    width: 450px;
+    height: 405px;
+    padding: 20px;
+    border-style: outset;
+    border-color: rgb(43, 166, 182);
+    border-radius: 20px;
+    inset: 50%;
+    translate: 140% 20%;
+    
+    overflow-y: auto; /* scroll if too many messages */
+
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+    background-color: rgb(43, 166, 182);
+}
+
+#yourMessagesTitle {
+    color: white;
+    background-color: rgb(166, 234, 255);
+    text-align: center;
+
+    border-style: outset;
+    border-color: rgb(112, 222, 255);
+    border-radius: 20px;
+
+    height: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.inputBoxes {
+    text-align: left;
+    margin-left: 50px;
+}
+
+#recepientLabel {
+    position: absolute;
+    top: 130px;
+}
+
+#messageLabel {
+    position: absolute;
+    top: 220px;
+}
+
+#recepientInput {
+    position: absolute;
+    top: 170px;
+
+    width: 320px;
+    height: 20px;
+}
+
+#messageInput {
+    position: absolute;
+    top: 260px;
+    width: 500px;
+    height: 90px;
+    resize: none;
+}
+
+#sendButton {
+    background-color: rgb(0, 216, 198);
+    border-color: rgb(0, 216, 198);
+    border-radius: 8px;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+
+    position: absolute;
+    bottom: 50px;
+    translate: 75% 50%;
+
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin-left: 50px;
+    
+}
+
+.labels {
+    margin-left: 50px;
+}
+
+#senderEmail {
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+
+    background-color: rgb(112, 222, 255);
+    border-style: outset;
+    border-color: rgb(112, 222, 255);
+    border-radius: 20px;
+
+    width: 300px;
+    height: 20px
+}
+
+#messageContents {
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
+#sendButton:hover {
+    background-color: rgb(68, 253, 238);
+}
+
+@keyframes titleHover {
+    from{transform: translateY(30%)}
+}
+
+@keyframes buttonIntroHover {
+    from{transform: translateY(50%)}
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1}
+}

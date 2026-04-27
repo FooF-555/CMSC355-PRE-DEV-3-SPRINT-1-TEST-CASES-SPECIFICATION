@@ -14,10 +14,10 @@ body{
     translate: 10% 10%;
     
     border-style: outset;
-    border-color: rgb(112, 222, 255);
+    border-color: rgb(166, 234, 255);
     border-radius: 20px;
 
-    background-color: rgb(112, 222, 255);
+    background-color: rgb(166, 234, 255);
 
     font-family: "Roboto", sans-serif;
     font-size: 30px;
@@ -40,7 +40,7 @@ body{
     width: 600px;
     height: 400px;
     inset: 50%;
-    translate: -39% -50%;
+    translate: -50% -50%;
 
     text-align: center;
 
@@ -49,7 +49,7 @@ body{
     opacity: 0;
 }
 
-#givenDetails {
+.details {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     text-align: left;
