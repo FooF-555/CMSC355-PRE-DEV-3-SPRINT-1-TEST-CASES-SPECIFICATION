@@ -22,7 +22,6 @@ public class MessageController {
         this.messageRepo = messageRepo;
     }
 
-    // 📥 Inbox
     @GetMapping("/patientInbox")
     public String patientInbox(Model model, HttpSession session) {
 
@@ -69,7 +68,6 @@ public class MessageController {
         return "messagePage";
     }
 
-    // ✉️ Send message
     @PostMapping("/sendMessage")
     public String sendMessage(@RequestParam String receiver, @RequestParam String content, HttpSession session) {
 
