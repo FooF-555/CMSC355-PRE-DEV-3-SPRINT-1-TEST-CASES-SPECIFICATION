@@ -1,7 +1,7 @@
 package com.example.demo.mongoclasses;
 
-import java.util.ArrayList;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class ProviderAccount extends Account{
     ArrayList<PatientAccount> connectedPatients;
@@ -37,11 +37,11 @@ public class ProviderAccount extends Account{
     }
 
     //for REQ2
-    public void sendMessage(String message, PatientAccount patient){
+/*     public void sendMessage(String message, PatientAccount patient){
         if (checkForPatientStatus(patient)){
             patient.addNote(new ProviderNote(this, patient, message, "00/00/0000"));
         } else {
             //something about patient not connected to provider
         }
-    }
+    } */
 }

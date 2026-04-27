@@ -31,7 +31,7 @@ public class Demo1Application {
         smth();
     } */
 
-    public void smth(){
+/*     public void smth(){
         patientRepo.save(new PatientAccount("first", "last", "p", "d@mail.com",
                 99, "g", LocalDate.now(), "123-456-7890", "other info", 123));
         PatientAccount patient = patientRepo.findAccByEmail("d@mail.com");
@@ -46,5 +46,5 @@ public class Demo1Application {
 
         System.out.println(doc.checkForPatientStatus(patient));
 
-    }
+    } */
 }

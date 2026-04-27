@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Medications</title>
+</head>
+
+<body>
+
+<h2>Your Medications</h2>
+
+<div th:if="${medications == null || medications.isEmpty()}">
+    <p>No medications found.</p>
+</div>
+
+<div th:each="med : ${medications}">
+    <div class="medCard">
+        <p><b>Name:</b> <span th:text="${med.medicationName}"></span></p>
+        <p><b>Dosage:</b> <span th:text="${med.dosage}"></span></p>
+        <p><b>Frequency:</b> <span th:text="${med.frequency}"></span></p>
+    </div>
+</div>
+
+</body>
+</html>

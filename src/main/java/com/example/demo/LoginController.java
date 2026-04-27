@@ -30,7 +30,6 @@ public class LoginController {
             return "redirect:/patientDashboard";
         }
         else {
-            model.addAttribute("error", "Invalid name/password!");
             return "patientLogin";
         }
     }
@@ -44,7 +43,6 @@ public class LoginController {
             return "redirect:/physicianDashboard";
         }
         else {
-            model.addAttribute("error", "Invalid name/password!");
             return "physicianLogin";
         }
     }

@@ -4,6 +4,12 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    gap: 40px;                 /* space between boxes */
+    height: 100vh;
 }
 
 #detailsTitle {
@@ -41,6 +47,8 @@ body{
     height: 400px;
     inset: 50%;
     translate: -50% -50%;
+
+    overflow-y: auto; /* scroll if too many patients */
 
     text-align: center;
 

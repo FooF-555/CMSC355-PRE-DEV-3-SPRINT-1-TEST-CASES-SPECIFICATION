@@ -7,5 +7,4 @@ public interface PatientAccountRepository extends MongoRepository<PatientAccount
 
     @Query("{email:'?0'}")
     PatientAccount findAccByEmail(String email);
-
 }

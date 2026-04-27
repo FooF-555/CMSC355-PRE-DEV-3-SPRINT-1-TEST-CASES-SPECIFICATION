@@ -1,7 +1,6 @@
 package com.example.demo.mongoclasses;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class PatientAccount extends Account{
     //idk if this will be used
     private int userID;
-    ArrayList<ProviderNote> providerNotes;
+    /* ArrayList<ProviderNote> providerNotes; */
 
     // Default constructor (testing atm)
     public PatientAccount() {
@@ -46,7 +45,7 @@ public class PatientAccount extends Account{
         return this;
     }
 
-    public void addNote(ProviderNote note){
+/*     public void addNote(ProviderNote note){
         providerNotes.add(note);
-    }
+    } */
 }

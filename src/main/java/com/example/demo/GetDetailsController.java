@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,5 +32,13 @@ public class GetDetailsController {
 
         return "patientGetDetails";
     }
-    
+
+    @GetMapping("/assignedPatients")
+    public String getAssignedPatients(Model model) {
+        List<PatientAccount> patients = patientRepo.findAll();
+
+        model.addAttribute("patients", patients);
+
+        return "assignedPatients";
+    }
 }

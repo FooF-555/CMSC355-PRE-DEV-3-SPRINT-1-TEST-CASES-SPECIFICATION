@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="/css/assignedPatients.css">
+    <!-- <link rel="stylesheet" href="../static/css/assignedPatients.css"> -->
+
+</head>
+
+<body>
+    <label id="detailsBox">
+        <h2>All Patients</h2>
+
+        <div th:each="patient : ${patients}">
+            <div class="patientCard">
+                <p class="details">
+                    <b>Name:</b>
+                    <span th:text="${patient.firstName}"></span>
+                    <span th:text="${patient.lastName}"></span>
+                </p>
+
+                <p class="details">Email: <span th:text="${patient.email}"></span></p>
+                <br>
+            </div>
+        </div>
+    </label>
+</body>
+
+</html>

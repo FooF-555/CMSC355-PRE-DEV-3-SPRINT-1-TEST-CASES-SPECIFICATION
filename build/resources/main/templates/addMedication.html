@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Medication</title>
+</head>
+
+<body>
+
+<h2>Add Medication</h2>
+
+<form action="/addMedication" method="post">
+    <label>Patient Email:</label>
+    <input type="text" name="patientEmail" required><br>
+
+    <label>Medication:</label>
+    <input type="text" name="medicationName" required><br>
+
+    <label>Dosage:</label>
+    <input type="text" name="dosage" required><br>
+
+    <label>Frequency:</label>
+    <input type="text" name="frequency" required><br>
+
+    <button type="submit">Add Medication</button>
+
+</form>
+
+
+</body>
+</html>
