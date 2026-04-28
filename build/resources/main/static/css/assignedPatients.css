@@ -12,7 +12,7 @@ body{
     height: 100vh;
 }
 
-#detailsTitle {
+h2 {
     position: absolute;
     height: 40px;
     width: 500px;
