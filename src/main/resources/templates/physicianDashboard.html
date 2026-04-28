@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/patientDashboard.css">
+    <link rel="stylesheet" th:href="@{/css/patientDashboard.css}">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
             Dashboard
         </label><br>
 
-        <a href="/physicianGetDetails">
+        <a th:href="@{/physicianGetDetails}">
             <button id="yourDetails" class="buttons">
                 Your Details
             </button>
