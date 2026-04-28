@@ -19,7 +19,7 @@ h1 {
     text-align: center;
     position: absolute;
     inset: 50%;
-    translate: -45% -450%;
+    translate: -47% -450%;
     
     animation: fadeIn 1s, titleHover 1s;
     animation-fill-mode: forwards;

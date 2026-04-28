@@ -14,7 +14,7 @@ body{
 
     background-color: rgb(166, 234, 255);
     border-radius: 20px;
-    color: black;
+    color: white;
 
     display: flex;
     align-items: center;
@@ -36,14 +36,14 @@ body{
     border-radius: 20px;
 
     width: 600px;
-    height: auto;
-    padding-bottom: 30px;
+    height: 400px;
+    inset: 50%;
+    translate: -50% -50%;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
 
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1s, buttonIntroHover 1s;
+    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -63,16 +63,14 @@ body{
     margin-bottom: 10px;
 }
 
+@keyframes titleHover {
+    from{transform: translateY(30%)}
+}
+
 @keyframes buttonIntroHover {
-    from { transform: translate(-50%, -20%); }
-    to { transform: translate(-50%, -50%); }
+    from{transform: translateY(50%)}
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    100%{opacity: 1}
 }
