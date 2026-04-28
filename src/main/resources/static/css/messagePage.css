@@ -74,6 +74,10 @@ h2 {
 .inputBoxes {
     text-align: left;
     margin-left: 50px;
+
+    border-radius: 4px;
+    border-style: outset;
+    border-color: rgb(206, 206, 206);
 }
 
 #recepientLabel {
@@ -108,7 +112,7 @@ h2 {
     border-radius: 8px;
     color: white;
     font-family: "Roboto Mono", monospace;
-    font-size: 15px;
+    font-size: 17px;
 
     position: absolute;
     bottom: 50px;

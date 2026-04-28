@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/addMedication.css">
+    <!-- <link rel="stylesheet" href="../static/css/addMedication.css"> -->
     <title>Add Medication</title>
 </head>
 
 <body>
 
-<h2>Add Medication</h2>
+<form id="box" action="/addMedication" method="post">
+    <h2>Add Medication</h2>
+    <div id="inputsAndLabels">
+        <label class="labels">Patient Email</label><br>
+        <input type="text" id="emailInput" class="inputBoxes" name="patientEmail" placeholder="Enter recepient mail address here" required><br>
 
-<form action="/addMedication" method="post">
-    <label>Patient Email:</label>
-    <input type="text" name="patientEmail" required><br>
+        <label class="labels">Medication</label><br>
+        <input type="text" id="medicationInput" class="inputBoxes" name="medicationName" placeholder="Enter medication name here" required><br>
 
-    <label>Medication:</label>
-    <input type="text" name="medicationName" required><br>
+        <label class="labels">Dosage</label><br>
+        <input type="text" id="dosageInput" class="inputBoxes" name="dosage" placeholder="Enter dosage amount here" required><br>
 
-    <label>Dosage:</label>
-    <input type="text" name="dosage" required><br>
+        <label class="labels">Frequency</label><br>
+        <input type="text" id="frequencyInput" class="inputBoxes" name="frequency" placeholder="Enter dosage frequency here"><br>
 
-    <label>Frequency:</label>
-    <input type="text" name="frequency" required><br>
+        <button id="addButton" type="submit">Add Medication</button>
+    </div>
 
-    <button type="submit">Add Medication</button>
 
 </form>
 
