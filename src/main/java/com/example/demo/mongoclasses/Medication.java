@@ -35,7 +35,6 @@ public class Medication {
     }
 
     // Setters
-
     public void setID(String ID) {
         this.ID = ID;
     }

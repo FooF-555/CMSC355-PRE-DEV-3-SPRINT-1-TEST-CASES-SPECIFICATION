@@ -12,27 +12,18 @@ body{
     height: 100vh;
 }
 
-#detailsTitle {
+h2 {
     position: absolute;
-    height: 40px;
-    width: 500px;
-    inset: 0%;
-    translate: 10% 10%;
-    
-    border-style: outset;
-    border-color: rgb(166, 234, 255);
-    border-radius: 20px;
-
-    background-color: rgb(166, 234, 255);
-
-    font-family: "Roboto", sans-serif;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
+    left: 120px;
+    top: -15px;
+
+    background-color: aliceblue;
 }
 
-
-h2 {
-    color: white;
+#box {
+    color: rgb(255, 255, 255);
     position: absolute;
 
     font-family: "Roboto", sans-serif;
@@ -44,29 +35,56 @@ h2 {
     border-radius: 20px;
 
     width: 600px;
-    height: 400px;
+    height: 500px;
     inset: 50%;
     translate: -50% -50%;
-
-    overflow-y: auto; /* scroll if too many patients */
-
-    text-align: center;
 
     animation: fadeIn 1s, buttonIntroHover 1s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.details {
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
+.inputBoxes {
     text-align: left;
+    margin-left: 100px;
+    height: 25px;
+    width: 400px;
 
-    position: relative;
-    left: 40px;
+    border-radius: 4px;
+    border-style: outset;
+    border-color: rgb(206, 206, 206);
 }
 
-#yourDetails:hover {
+.labels {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#inputsAndLabels {
+    position: absolute;
+    top: 100px;
+}
+#addButton {
+    position: absolute;
+    margin-left: 150px;
+    bottom: -80px;
+    width: 300px;
+    height: 50px;
+
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    font-size: 17px;
+
+    background-color: rgb(0, 216, 198);
+    border-color: rgb(0, 216, 198);
+    border-style: outset;
+    border-radius: 8px;
+}
+
+#sendButton:hover {
     background-color: rgb(68, 253, 238);
 }
 
