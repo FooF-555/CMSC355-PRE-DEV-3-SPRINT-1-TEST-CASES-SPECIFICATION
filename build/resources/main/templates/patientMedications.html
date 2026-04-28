@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Your Medications</title>
+    <link rel="stylesheet" th:href="@{/css/patientMedications.css}">
 </head>
 
 <body>
+<div id="medicationBox">
+    <div id="medicationTitle">
+        Your Medications
+    </div>
 
-<h2>Your Medications</h2>
+    <div id="givenDetails">
+        <div th:if="${medications == null || medications.isEmpty()}" class="no-meds">
+            <p>No medications currently on file.</p>
+        </div>
 
-<div th:if="${medications == null || medications.isEmpty()}">
-    <p>No medications found.</p>
-</div>
-
-<div th:each="med : ${medications}">
-    <div class="medCard">
-        <p><b>Name:</b> <span th:text="${med.medicationName}"></span></p>
-        <p><b>Dosage:</b> <span th:text="${med.dosage}"></span></p>
-        <p><b>Frequency:</b> <span th:text="${med.frequency}"></span></p>
+        <div th:each="med : ${medications}" class="medCard">
+            <p class="details"><b>Name:</b> <span th:text="${med.medicationName}"></span></p>
+            <p class="details"><b>Dosage:</b> <span th:text="${med.dosage}"></span></p>
+            <p class="details"><b>Frequency:</b> <span th:text="${med.frequency}"></span></p>
+            <hr class="medDivider"> </div>
     </div>
 </div>
-
 </body>
 </html>

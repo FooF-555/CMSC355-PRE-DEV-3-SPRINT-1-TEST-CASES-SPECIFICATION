@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/physicianLogin.css">
+    <title>Physician Login</title>
+    <link rel="stylesheet" th:href="@{/css/physicianLogin.css}">
 </head>
 
 <body>
-    <form action="/physicianLogin" id="loginPage" method="post">
-        <label for="Log In Title" id="loginTitle" style="font-size: 50px;">
-            <pre>
-                Physician Login
-            </pre>
-        </label>
+    <form th:action="@{/physicianLogin}" id="loginPage" method="post">
+        <div id="detailsTitle">
+            Physician Login
+        </div>
 
-        <label for="Username" id="usernameLabel" class="inputLabels" style="font-size: medium;">
-            <b>Username: </b>
-        </label>
-        <input type="text" name="firstName" id="inputUsername" class="inputBoxes" placeholder="Enter email address" required><br><br><br>
+        <div id="loginFormContainer">
+            <div class="inputRow">
+                <label for="inputUsername" class="inputLabels">Username:</label>
+                <input type="text" name="firstName" id="inputUsername" class="inputBoxes" placeholder="Enter email address" required>
+            </div>
 
-        <label for="Password" id="passwordLabel" class="inputLabels" style="font-size: medium;">
-           <b>Password: </b>
-        </label>
-        <input type="password" name="password" id="inputPassword" class="inputBoxes" placeholder="Enter password" minlength="7" required>
+            <div class="inputRow">
+                <label for="inputPassword" class="inputLabels">Password:</label>
+                    <input type="password" name="password" id="inputPassword" class="inputBoxes" placeholder="Enter password" minlength="7" required>
+            </div>
 
-        <p style="color:red;" th:if="${error}" th:text="${error}"></p>
-        
-        <button type="submit" id="loginButton" style="font-size: large;">
-            LOGIN
-        </button>
+            <button type="submit" id="loginButton">
+                    LOGIN
+            </button>
+        </div>
     </form>
 </body>
+</html>
