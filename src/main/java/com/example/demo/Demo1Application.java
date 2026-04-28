@@ -1,15 +1,11 @@
 package com.example.demo;
 
-import java.time.LocalDate;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.example.demo.mongoclasses.PatientAccount;
 import com.example.demo.mongoclasses.PatientAccountRepository;
-import com.example.demo.mongoclasses.ProviderAccount;
 import com.example.demo.mongoclasses.ProviderAccountRepository;
 
 @SpringBootApplication

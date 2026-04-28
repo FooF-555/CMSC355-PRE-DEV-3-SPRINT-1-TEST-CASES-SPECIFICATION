@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physician Dashboard</title>
     <link rel="stylesheet" th:href="@{/css/physicianGetDetails.css}">
+    <!-- <link rel="stylesheet" href="../static/css/physicianGetDetails.css"> -->
 </head>
 
 <body>
@@ -14,14 +15,14 @@
         </div>
 
         <div id="givenDetails">
-            <p class="details">First Name: <span th:text="${physician.firstName}"></span></p>
-            <p class="details">Last Name: <span th:text="${physician.lastName}"></span></p>
-            <p class="details">Email: <span th:text="${physician.email}"></span></p>
-            <p class="details">Age: <span th:text="${physician.age}"></span></p>
-            <p class="details">Gender: <span th:text="${physician.gender}"></span></p>
-            <p class="details">Date of Birth: <span th:text="${physician.dateOfBirth}"></span></p>
-            <p class="details">Phone Number: <span th:text="${physician.phoneNumber}"></span></p>
-            <p class="details">Additional Info: <span th:text="${physician.additionalInfo}"></span></p>
+            <p class="details">First Name - <span class="physicianInfo" th:text="${physician.firstName}"></span></p>
+            <p class="details">Last Name - <span class="physicianInfo" th:text="${physician.lastName}"></span></p>
+            <p class="details">Email - <span class="physicianInfo" th:text="${physician.email}"></span></p>
+            <p class="details">Age - <span class="physicianInfo" th:text="${physician.age}"></span></p>
+            <p class="details">Gender - <span class="physicianInfo" th:text="${physician.gender}"></span></p>
+            <p class="details">Date of Birth - <span class="physicianInfo" th:text="${physician.dateOfBirth}"></span></p>
+            <p class="details">Phone Number - <span class="physicianInfo" th:text="${physician.phoneNumber}"></span></p>
+            <p class="details">Additional Info - <span class="physicianInfo" th:text="${physician.additionalInfo}"></span></p>
         </div>
     </div>
 </body>

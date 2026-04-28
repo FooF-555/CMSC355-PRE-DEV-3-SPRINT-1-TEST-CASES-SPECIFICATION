@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Dashboard</title>
+    <title>Patient Details</title>
     <link rel="stylesheet" href="/css/patientGetDetails.css">
     <!-- <link rel="stylesheet" href="../static/css/patientGetDetails.css"> -->
 
@@ -16,19 +16,18 @@
             Your Details
         </label><br>
 
-        <label id="givenDetails">
+        <div id="givenDetails">
            <!-- to be filled-->
-            <br>
-            <p class="details">ID: <span th:text="${patient.userID}"></span></p>
-            <p class="details">First Name: <span th:text="${patient.firstName}"></span></p>
-            <p class="details">Last Name: <span th:text="${patient.lastName}"></span></p>
-            <p class="details">Email: <span th:text="${patient.email}"></span></p>
-            <p class="details">Age: <span th:text="${patient.age}"></span></p>
-            <p class="details">Gender: <span th:text="${patient.gender}"></span></p>
-            <p class="details">Date of Birth: <span th:text="${patient.dateOfBirth}"></span></p>
-            <p class="details">Phone Number: <span th:text="${patient.phoneNumber}"></span></p>
-            <p class="details">Additional Information: <span th:text="${patient.additionalInfo}"></span></p>
-        </label>
+            <p class="details">ID - <span class="patientInfo" th:text="${patient.userID}"></span></p>
+            <p class="details">First Name - <span class="patientInfo" th:text="${patient.firstName}"></span></p>
+            <p class="details">Last Name - <span class="patientInfo" th:text="${patient.lastName}"></span></p>
+            <p class="details">Email - <span class="patientInfo" th:text="${patient.email}"></span></p>
+            <p class="details">Age - <span class="patientInfo" th:text="${patient.age}"></span></p>
+            <p class="details">Gender - <span class="patientInfo" th:text="${patient.gender}"></span></p>
+            <p class="details">Date of Birth - <span class="patientInfo" th:text="${patient.dateOfBirth}"></span></p>
+            <p class="details">Phone Number - <span class="patientInfo" th:text="${patient.phoneNumber}"></span></p>
+            <p class="details">Additional Information - <span class="patientInfo" th:text="${patient.additionalInfo}"></span></p>
+        </div>
     </label>
 
 </body>

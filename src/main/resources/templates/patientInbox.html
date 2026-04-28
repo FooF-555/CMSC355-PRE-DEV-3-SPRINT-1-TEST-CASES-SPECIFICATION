@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Dashboard</title>
-    <link rel="stylesheet" href="../css/patientDashboard.css">
-    <!-- <link rel="stylesheet" href="../static/css/patientGetDetails.css"> -->
+    <title>Patient Inbox</title>
+    <link rel="stylesheet" href="../css/patientInbox.css">
+    <!-- <link rel="stylesheet" href="../static/css/patientInbox.css"> -->
 
 </head>
 
 <body>
-    <label id="detailsBox">
+    <div id="box">
         <h2>Inbox</h2>
 
         <div th:each="msg : ${messages}">
-            <p>
-                From: <span th:text="${msg.senderEmail}"></span><br>
+            <div id="inboxBox">
+                <div id="senderInfo" class="info">
+                    From -  <span id="senderEmail" th:text="${msg.senderEmail}"></span><br>
+                </div>
 
                 <!-- go to messaging page -->
-                <a th:href="@{/messagePage(otherUser=${msg.senderEmail})}">
-                    Open Chat
+                <a id="openChat" class="info" th:href="@{/messagePage(otherUser=${msg.senderEmail})}">
+                    OPEN CHAT
                 </a>
-            </p>
+            </div>
         </div>
 
         <!-- start new message -->
         <a href="/messagePage">
-            <button>New Message</button>
+            <button id="newMessageButton">
+                NEW MESSAGE
+            </button>
         </a>
-    </label>
-
+    </div>
 </body>
+
+</html>

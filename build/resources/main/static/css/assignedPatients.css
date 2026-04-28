@@ -63,7 +63,20 @@ h2 {
     text-align: left;
 
     position: relative;
-    left: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: rgb(51, 194, 175);
+}
+
+.infoBox {
+    position: relative;
+    background-color: rgb(243, 241, 241);
+    border-style: inset;
+    width: 500px;
+    height: 260px;
+    border-radius: 8px;
+    margin-left: 50px;
+    overflow-y: auto;
 }
 
 #yourDetails:hover {

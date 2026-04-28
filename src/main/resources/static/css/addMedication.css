@@ -64,6 +64,7 @@ h2 {
     position: absolute;
     top: 100px;
 }
+
 #addButton {
     position: absolute;
     margin-left: 150px;
@@ -82,7 +83,7 @@ h2 {
     border-radius: 8px;
 }
 
-#sendButton:hover {
+#addButton:hover {
     background-color: rgb(68, 253, 238);
 }
 

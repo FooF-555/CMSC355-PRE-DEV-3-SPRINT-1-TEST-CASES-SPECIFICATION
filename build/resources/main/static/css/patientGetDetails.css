@@ -53,14 +53,30 @@ body{
 .details {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
     text-align: left;
 
     position: relative;
-    left: 40px;
+    margin-left: 20px;
+    color: rgb(51, 194, 175);
 }
 
-#yourDetails:hover {
-    background-color: rgb(68, 253, 238);
+.patientInfo {
+    color: rgb(56, 168, 243)
+}
+
+#givenDetails {
+    position: absolute;
+    background-color: rgb(243, 241, 241);
+    border-style: inset;
+    border-radius: 8px;
+    overflow-y: auto;
+
+    height: 310px;
+    width: 550px;;
+    inset: 50%;
+    translate: -50% -43%;
 }
 
 @keyframes titleHover {

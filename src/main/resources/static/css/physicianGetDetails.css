@@ -13,7 +13,9 @@ body{
     width: 80%;
 
     background-color: rgb(166, 234, 255);
+    border-color: rgb(166, 234, 255);
     border-radius: 20px;
+    border-style: outset;
     color: white;
 
     display: flex;
@@ -47,20 +49,32 @@ body{
     opacity: 0;
 }
 
-/*
 #givenDetails {
-    margin-top: 60px;
+    position: absolute;
+    background-color: rgb(243, 241, 241);
+    border-style: inset;
+    font-weight: bold;
+    border-radius: 8px;
+    overflow-y: auto;
+
+    height: 280px;
+    width: 550px;;
+    inset: 50%;
+    translate: -50% -40%;
 }
-*/
 
 .details {
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
 
     position: relative;
-    left: 40px;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    color: rgb(51, 194, 175);
+}
+
+.physicianInfo {
+    color: rgb(56, 168, 243);
 }
 
 @keyframes titleHover {

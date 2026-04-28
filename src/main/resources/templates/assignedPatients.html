@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Dashboard</title>
+    <title>Patient List</title>
     <link rel="stylesheet" href="/css/assignedPatients.css">
     <!-- <link rel="stylesheet" href="../static/css/assignedPatients.css"> -->
 
@@ -12,17 +12,22 @@
 <body>
     <label id="detailsBox">
         <h2>All Patients</h2><br><br><br>
+        
+        <div class="infoBox">
+            <div th:each="patient : ${patients}">
+                <div class="patientCard">
+                    <div class="details">
+                        <b>Name:</b>
+                        <span th:text="${patient.firstName}"></span>
+                        <span th:text="${patient.lastName}"></span>
+                    </div>
 
-        <div th:each="patient : ${patients}">
-            <div class="patientCard">
-                <p class="details">
-                    <b>Name:</b>
-                    <span th:text="${patient.firstName}"></span>
-                    <span th:text="${patient.lastName}"></span>
-                </p>
-
-                <p class="details">Email: <span th:text="${patient.email}"></span></p>
-                <br>
+                    <p class="details">
+                        <b>Email:</b>
+                        <span th:text="${patient.email}"></span>
+                    </p>
+                    <br>
+                </div>
             </div>
         </div>
     </label>
